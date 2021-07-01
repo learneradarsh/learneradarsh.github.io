@@ -8,7 +8,7 @@
   url: https://www.thoughtworks.com/
   time: Feb 2020 - Jan 2021
   position: UI Developer - Consultant
-  description: `
+  description: "
     1. Contributed to Bahmni, open source easy to use EMR & hospital management system.
     https://github.com/Bahmni/openmrs-module-appointments-frontend
 
@@ -27,13 +27,13 @@
     Kept track of security practices in a project with team as a Security Champion:
     a). Integrated Talisman.
     b). Setup npm-audit in pipeline for automated vulnerable package check.
-  `
+  "
 
 - company: Moonraft Innovation Labs
   url: https://moonraft.com/home
   time: Feb 2019 - Jan 2020
   position: Software Engineer
-  description: `
+  description: "
   Worked on One of the World's Largest Global Charitable Trust Web Application
 
   ● Implemented features: VC Password meter, Webadvisor Registration,
@@ -43,13 +43,13 @@
   Password using JavaScript and SonarQube.
   ● Improved performance of TIFF Exchange using React.JS, and SonarQube.
 
-  `
+  "
 
 - company: LearnShiz Techies
   url: https://learnshiz.com/
   time: Jun 2018 - Feb 2019
   position: Software Engineer
-  description: `
+  description: "
     1. Smart Home UAE Based Startup
 Worked on product showcase web application based on Wordpress from scratch.
 
@@ -60,4 +60,4 @@ Worked on product showcase web application based on Wordpress from scratch.
 
     4. Developed Gender Picker for internal LearnShiz open source project.
     https://github.com/LearnShizTechies/GenderPicker
-  `
+  "
