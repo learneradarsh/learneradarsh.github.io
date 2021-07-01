@@ -1,37 +1,17 @@
-## Welcome to GitHub Pages
+# v3
 
-You can use the [editor on GitHub](https://github.com/learneradarsh/learneradarsh.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Third iteration of my personal website built with Jekyll.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+> 📢 **PSA for those who want to fork or copy this repo and use it for their own site:**
+>
+> Please be a decent person and give me proper credit by linking back to my website! Refer to this handy [quora post](https://www.quora.com/Is-it-bad-to-copy-other-peoples-code) if you're not sure.
 
-### Markdown
+## Dependencies
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+- [Gulp](https://gulpjs.com/)
 
-```markdown
-Syntax highlighted code block
+## Getting Started
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/learneradarsh/learneradarsh.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+1.  `gem install jekyll sass bundler jekyll-minifier jekyll-sitemap`
+2.  `npm install`
+3.  `npm start`
