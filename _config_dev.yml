@@ -1,26 +1,28 @@
 # Site settings
-name: Brittany Chiang
-title: Brittany Chiang | Front End Software Engineer
+name: Adarsh Pandey
+title: Adarsh Pandey | Front End Software Engineer
 description: Design-minded front-end software engineer focused on building beautiful interfaces and experiences
-url: https://bchiang7.github.io/
+url: https://learneradarsh.github.io/
 baseurl: ''
-email: brittany.chiang@gmail.com
-cover: https://bchiang7.github.io/img/og.png
-logo: https://bchiang7.github.io/img/emojis/technologist.png
-resume: https://bchiang7.github.io/resume.pdf
+email: learner.adarsh@gmail.com
+cover: https://learneradarsh.github.io/img/og.png
+logo: https://learneradarsh.github.io/img/emojis/technologist.png
+resume: https://learneradarsh.github.io/resume.pdf
+linkedin: https://linkedin.com/in/learneradarsh
 social:
   - title: email
-    url: mailto:brittany.chiang@gmail.com
-  - title: twitter
-    url: https://twitter.com/bchiang7
-  - title: instagram
-    url: https://instagram.com/bchiang7
-  - title: codepen
-    url: http://codepen.io/bchiang7
+    url: mailto:learner.adarsh@gmail.com
+  - title: LeetCode
+    url: https://leetcode.com/learneradarsh
+  - title: hackerrank
+    url: https://hackerrank.com/learner_adarsh
+  - title: mozilla
+    url: https://www.mozillians.org/en-US/u/add_19
+97/
   - title: github
-    url: https://github.com/bchiang7
+    url: https://github.com/learneradarsh
   - title: linkedin
-    url: https://www.linkedin.com/in/bchiang7
+    url: https://www.linkedin.com/in/learneradarsh
 
 # Build settings
 markdown: kramdown
