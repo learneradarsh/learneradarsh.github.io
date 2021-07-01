@@ -16,7 +16,7 @@ tools:
   - item: Postman
   - item: Docker
 
-Others:
+others:
   - item: Wordpress
   - item: Joomla
   - item: Jquery
