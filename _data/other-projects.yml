@@ -26,3 +26,21 @@
     - thing: Shell
     - thing: Python
     - thing: EJS
+
+- name: GenderPicker Widget
+  url: https://github.com/learneradarsh/GenderPicker
+  code: https://github.com/learneradarsh/GenderPicker
+  description: A simple gender picker widget.
+  used:
+    - thing: Typescript
+    - thing: HTML
+    - thing: CSS
+
+- name: Pattern Lock
+  url: https://github.com/learneradarsh/patternlock
+  code: https://github.com/learneradarsh/patternlock
+  description: A simple pattern lock widget.
+  used:
+    - thing: Javascript
+    - thing: HTML
+    - thing: CSS
