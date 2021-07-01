@@ -7,7 +7,7 @@
   url: 'https://www.thoughtworks.com/'
   time: Feb 2020 - Jan 2021
   position: UI Developer - Consultant
-  description: >2-
+  description: |
     - Contributed to Bahmni, open source easy to use EMR & hospital management system. 
      https://github.com/Bahmni/openmrs-module-appointments-frontend 
 
@@ -34,24 +34,25 @@
   url: 'https://moonraft.com/home'
   time: Feb 2019 - Jan 2020
   position: Software Engineer
-  description: >2
-     Worked on One of the World's Largest Global Charitable Trust Web Application
-    ● Implemented features: VC Password meter, Webadvisor Registration,
-    Re-registration, Open New Account using HTML5, SCSS, Jquery, Bootstrap, and
-    JavaScript. ● Improved performance and code quality for Login, Forgot User
-    Id and Forgot Password using JavaScript and SonarQube. ● Improved
-    performance of TIFF Exchange using React.JS, and SonarQube.
+  description: |
+    - Worked on One of the World's Largest Global Charitable Trust Web Application
+    - Implemented features like VC Password meter, Webadvisor Registration,
+    Reregistration, Open New Account using HTML5, SCSS, Jquery, Bootstrap, and
+    JavaScript. 
+    - Improved performance and code quality for Login, Forgot User
+    Id and Forgot Password using JavaScript and SonarQube. 
+    - Improved performance of TIFF Exchange using React.JS, and SonarQube.
 - company: LearnShiz Techies
   url: 'https://learnshiz.com/'
   time: Jun 2018 - Feb 2019
   position: Software Engineer
-  description: >2-
-     1. Smart Home UAE Based Startup Worked on product showcase web application based on Wordpress from scratch.
-    2. Poland Based B2B E-commerce Application Worked as a full-stack developer
-    using Wordpress from scratch.
+  description: |
+     - Smart Home UAE Based Startup Worked on product showcase web application based on Wordpress from scratch.
+     - Poland Based B2B E-commerce Application Worked as a full-stack developer
+       using Wordpress from scratch.
+    
+     - Developed LS Talk community for startups and investors under LearnShiz
+       Group.
 
-    3. Developed LS Talk community for startups and investors under LearnShiz
-    Group.
-
-    4. Developed Gender Picker for internal LearnShiz open source project.
-    https://github.com/LearnShizTechies/GenderPicker 
+     - Developed Gender Picker for internal LearnShiz open source project.
+       https://github.com/LearnShizTechies/GenderPicker 
