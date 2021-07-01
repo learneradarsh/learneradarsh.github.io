@@ -9,24 +9,24 @@
   time: Feb 2020 - Jan 2021
   position: UI Developer - Consultant
   description: "
-    1. Contributed to Bahmni, open source easy to use EMR & hospital management system.
-    https://github.com/Bahmni/openmrs-module-appointments-frontend
+    1. Contributed to Bahmni, open source easy to use EMR & hospital management system. \n
+    https://github.com/Bahmni/openmrs-module-appointments-frontend \n
 
-    2. Practised Clean Code techniques.
+    2. Practised Clean Code techniques.\n
 
-    3. Worked on Hospitality Sector Based Data Analytics Product as a UI Dev with awesome team.
-    a). Angular 9
-    b). Jest and Angular Testing Library
-    c). Cypress
-    d). Semantic HTML, SCSS
-    e). XP Practices
-    f). Bitbucket CI/CD Pipeline
-    g). Sonarqube
-    h). Docker
+    3. Worked on Hospitality Sector Based Data Analytics Product as a UI Dev with awesome team.\n
+    a). Angular 9 \n
+    b). Jest and Angular Testing Library \n
+    c). Cypress \n
+    d). Semantic HTML, SCSS \n
+    e). XP Practices \n
+    f). Bitbucket CI/CD Pipeline \n
+    g). Sonarqube \n
+    h). Docker \n
 
-    Kept track of security practices in a project with team as a Security Champion:
-    a). Integrated Talisman.
-    b). Setup npm-audit in pipeline for automated vulnerable package check.
+    Kept track of security practices in a project with team as a Security Champion: \n
+    a). Integrated Talisman. \n
+    b). Setup npm-audit in pipeline for automated vulnerable package check. \n
   "
 
 - company: Moonraft Innovation Labs
