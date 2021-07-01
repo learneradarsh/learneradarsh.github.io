@@ -1,63 +1,57 @@
 - company: Publicis Sapient
-  url: https://www.publicissapient.com/
+  url: 'https://www.publicissapient.com/'
   time: Jan 2021 - Present
   position: Associate XT L2
-  description: "Working on Telecom sector product."
-
+  description: Working on Telecom sector product.
 - company: ThoughtWorks
-  url: https://www.thoughtworks.com/
+  url: 'https://www.thoughtworks.com/'
   time: Feb 2020 - Jan 2021
   position: UI Developer - Consultant
-  description: "
-    1. Contributed to Bahmni, open source easy to use EMR & hospital management system. \n
-    https://github.com/Bahmni/openmrs-module-appointments-frontend \n
+  description: >2-
+     1. Contributed to Bahmni, open source easy to use EMR & hospital management system. 
+     https://github.com/Bahmni/openmrs-module-appointments-frontend 
 
-    2. Practised Clean Code techniques.\n
+    2. Practised Clean Code techniques.
 
-    3. Worked on Hospitality Sector Based Data Analytics Product as a UI Dev with awesome team.\n
-    a). Angular 9 \n
-    b). Jest and Angular Testing Library \n
-    c). Cypress \n
-    d). Semantic HTML, SCSS \n
-    e). XP Practices \n
-    f). Bitbucket CI/CD Pipeline \n
-    g). Sonarqube \n
-    h). Docker \n
 
-    Kept track of security practices in a project with team as a Security Champion: \n
-    a). Integrated Talisman. \n
-    b). Setup npm-audit in pipeline for automated vulnerable package check. \n
-  "
+    3. Worked on Hospitality Sector Based Data Analytics Product as a UI Dev
+    with awesome team.
+     a). Angular 9 
+     b). Jest and Angular Testing Library 
+     c). Cypress 
+     d). Semantic HTML, SCSS 
+     e). XP Practices 
+     f). Bitbucket CI/CD Pipeline 
+     g). Sonarqube 
+     h). Docker 
 
+    Kept track of security practices in a project with team as a Security
+    Champion: 
+     a). Integrated Talisman. 
+     b). Setup npm-audit in pipeline for automated vulnerable package check. 
+     
 - company: Moonraft Innovation Labs
-  url: https://moonraft.com/home
+  url: 'https://moonraft.com/home'
   time: Feb 2019 - Jan 2020
   position: Software Engineer
-  description: "
-  Worked on One of the World's Largest Global Charitable Trust Web Application
-
-  ● Implemented features: VC Password meter, Webadvisor Registration,
-  Re-registration, Open New Account using HTML5, SCSS, Jquery, Bootstrap, and
-  JavaScript.
-  ● Improved performance and code quality for Login, Forgot User Id and Forgot
-  Password using JavaScript and SonarQube.
-  ● Improved performance of TIFF Exchange using React.JS, and SonarQube.
-
-  "
-
+  description: >2
+     Worked on One of the World's Largest Global Charitable Trust Web Application
+    ● Implemented features: VC Password meter, Webadvisor Registration,
+    Re-registration, Open New Account using HTML5, SCSS, Jquery, Bootstrap, and
+    JavaScript. ● Improved performance and code quality for Login, Forgot User
+    Id and Forgot Password using JavaScript and SonarQube. ● Improved
+    performance of TIFF Exchange using React.JS, and SonarQube.
 - company: LearnShiz Techies
-  url: https://learnshiz.com/
+  url: 'https://learnshiz.com/'
   time: Jun 2018 - Feb 2019
   position: Software Engineer
-  description: "
-    1. Smart Home UAE Based Startup
-Worked on product showcase web application based on Wordpress from scratch.
+  description: >2-
+     1. Smart Home UAE Based Startup Worked on product showcase web application based on Wordpress from scratch.
+    2. Poland Based B2B E-commerce Application Worked as a full-stack developer
+    using Wordpress from scratch.
 
-    2. Poland Based B2B E-commerce Application
-    Worked as a full-stack developer using Wordpress from scratch.
-
-    3. Developed LS Talk community for startups and investors under LearnShiz Group.
+    3. Developed LS Talk community for startups and investors under LearnShiz
+    Group.
 
     4. Developed Gender Picker for internal LearnShiz open source project.
-    https://github.com/LearnShizTechies/GenderPicker
-  "
+    https://github.com/LearnShizTechies/GenderPicker 
