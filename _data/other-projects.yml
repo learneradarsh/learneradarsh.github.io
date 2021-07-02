@@ -44,3 +44,22 @@
     - thing: Javascript
     - thing: HTML
     - thing: CSS
+
+- name: DiceGame
+  url: https://github.com/learneradarsh/JSPrac/tree/main/pigGame
+  code: https://github.com/learneradarsh/JSPrac/tree/main/pigGame
+  description: Simple Dice Game
+  used:
+    - thing: Javascript
+    - thing: HTML
+    - thing: CSS
+
+
+- name: Bankist
+  url: https://github.com/learneradarsh/JSPrac/tree/main/bankist
+  code: https://github.com/learneradarsh/JSPrac/tree/main/bankist
+  description: Minimalist Banking Application
+  used:
+    - thing: Javascript
+    - thing: HTML
+    - thing: CSS
