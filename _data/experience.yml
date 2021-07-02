@@ -25,10 +25,9 @@
      - Sonarqube 
      - Docker 
 
-    - Kept track of security practices in a project with team as a Security
-    Champion: 
-     - Integrated Talisman. 
-     - Setup npm-audit in pipeline for automated vulnerable package check. 
+    - Kept track of security practices in a project with team as a Security  Champion 
+    - Integrated Talisman. 
+    - Setup npm-audit in pipeline for automated vulnerable package check. 
      
 - company: Moonraft Innovation Labs
   url: 'https://moonraft.com/home'
@@ -42,6 +41,7 @@
     - Improved performance and code quality for Login, Forgot User
     Id and Forgot Password using JavaScript and SonarQube. 
     - Improved performance of TIFF Exchange using React.JS, and SonarQube.
+    
 - company: LearnShiz Techies
   url: 'https://learnshiz.com/'
   time: Jun 2018 - Feb 2019
