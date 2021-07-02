@@ -3,6 +3,7 @@
   time: Jan 2021 - Present
   position: Associate XT L2
   description: Working on Telecom sector product.
+
 - company: ThoughtWorks
   url: 'https://www.thoughtworks.com/'
   time: Feb 2020 - Jan 2021
@@ -10,7 +11,7 @@
   description: |
     - Contributed to Bahmni, open source easy to use EMR & hospital management system. 
      https://github.com/Bahmni/openmrs-module-appointments-frontend 
-
+ 
     - Practised Clean Code techniques.
 
 
