@@ -3,13 +3,12 @@ languages:
   - item: TypeScript
   - item: HTML
   - item: CSS/Sass
-  - item: SQL
 
 frameworks:
   - item: React
-  - item: Node
-  - item: Wordpress
+  - item: Node.JS
   - item: Angular
+  - item: React.JS
   - item: Bootstrap
 
 tools:
@@ -20,3 +19,5 @@ others:
   - item: Wordpress
   - item: Joomla
   - item: Jquery
+  - item: AWS
+  - item: Figma
