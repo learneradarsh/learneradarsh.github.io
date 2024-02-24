@@ -1,8 +1,18 @@
+- company: Delta Airlines
+  url: 'https://www.delta.com/'
+  time: Dec 2022 - Present
+  position: Senior Developer 1
+  description: Working for Delta Sync Exclusive Hub
+  
 - company: Publicis Sapient
   url: 'https://www.publicissapient.com/'
-  time: Jan 2021 - Present
-  position: Associate XT L2
-  description: Working on Telecom sector product.
+  time: Jan 2021 - Nov 2022
+position: Senior Associate XT L1
+  description: |
+    - Contributed to Bahmni, open source easy to use EMR & hospital management system. 
+     https://github.com/Bahmni/openmrs-module-appointments-frontend 
+ 
+    - Practised Clean Code techniques.
 
 - company: ThoughtWorks
   url: 'https://www.thoughtworks.com/'
