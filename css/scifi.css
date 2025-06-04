@@ -1,0 +1,29 @@
+body {
+  background: radial-gradient(circle at center, #01010c 0%, #000000 100%);
+  font-family: 'Orbitron', 'Apercu', sans-serif;
+  color: #0ff;
+}
+
+.section__title {
+  color: #0ff;
+  text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+  transform: perspective(500px) rotateX(15deg);
+}
+
+.section__content {
+  color: #e0e0e0;
+}
+
+.intro__hello,
+.intro__tagline {
+  font-family: 'Orbitron', 'Apercu', sans-serif;
+  text-shadow: 0 0 10px #0ff;
+}
+
+a {
+  color: #0ff;
+}
+
+a:hover {
+  color: #fff;
+}
