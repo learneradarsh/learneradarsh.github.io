@@ -1,0 +1,6 @@
+[
+  {"language": "JavaScript", "percent": 60},
+  {"language": "HTML", "percent": 20},
+  {"language": "CSS", "percent": 15},
+  {"language": "Other", "percent": 5}
+]

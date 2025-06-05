@@ -1,6 +1,7 @@
 (function() {
   const radarEl = document.getElementById('skillRadar');
   const barEl = document.getElementById('experienceBar');
+  const codeRatioEl = document.getElementById('codeRatioChart');
 
   function buildRadar() {
     if (!radarEl) return;
@@ -63,6 +64,32 @@
     });
   }
 
+  function buildCodeRatio() {
+    if (!codeRatioEl) return;
+    const data = JSON.parse(codeRatioEl.dataset.ratio);
+    const labels = data.map(d => d.language);
+    const values = data.map(d => d.percent);
+    new Chart(codeRatioEl, {
+      type: 'doughnut',
+      data: {
+        labels: labels,
+        datasets: [{
+          data: values,
+          backgroundColor: [
+            'rgba(255, 99, 132, 0.6)',
+            'rgba(54, 162, 235, 0.6)',
+            'rgba(255, 206, 86, 0.6)',
+            'rgba(153, 102, 255, 0.6)'
+          ]
+        }]
+      },
+      options: {
+        animation: { duration: 1000 },
+        plugins: { legend: { position: 'bottom' } }
+      }
+    });
+  }
+
   function onVisible(el, callback) {
     if (!el) return;
     const observer = new IntersectionObserver(entries => {
@@ -78,6 +105,7 @@
 
   onVisible(radarEl, buildRadar);
   onVisible(barEl, buildBar);
+  onVisible(codeRatioEl, buildCodeRatio);
 
   // GitHub heatmap
   if (document.getElementById('github-heatmap')) {
