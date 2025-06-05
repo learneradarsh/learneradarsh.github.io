@@ -27,3 +27,48 @@ a {
 a:hover {
   color: #fff;
 }
+
+/* Airline inspired 3D timeline for experience section */
+.experience .jobs {
+  position: relative;
+  margin-left: 40px;
+  padding-left: 20px;
+}
+
+.experience .jobs:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, rgba(0, 255, 255, 0.8), rgba(0, 255, 255, 0));
+  box-shadow: 0 0 10px #0ff;
+}
+
+.experience .job {
+  position: relative;
+  padding: 20px;
+  margin-bottom: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  border-radius: 8px;
+  transform: perspective(600px) rotateY(-10deg);
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.experience .job:hover {
+  transform: perspective(600px) rotateY(0deg) translateZ(20px);
+  box-shadow: 0 0 20px #0ff;
+}
+
+.experience .job:before {
+  content: "";
+  position: absolute;
+  left: -28px;
+  top: 20px;
+  width: 20px;
+  height: 20px;
+  background: url('../img/emojis/rocket.png') no-repeat center/contain;
+  filter: drop-shadow(0 0 5px #0ff);
+}
