@@ -1,7 +1,15 @@
 body {
-  background: radial-gradient(circle at center, #01010c 0%, #000000 100%);
+  background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #0f0c29);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
   font-family: 'Orbitron', 'Apercu', sans-serif;
   color: #0ff;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 .section__title {
@@ -71,4 +79,18 @@ a:hover {
   height: 20px;
   background: url('../img/emojis/rocket.png') no-repeat center/contain;
   filter: drop-shadow(0 0 5px #0ff);
+}
+
+.featured-projects .project,
+.other-projects .project {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+  margin-bottom: 20px;
+}
+
+.featured-projects .project__pic img {
+  border-radius: 5px;
 }
