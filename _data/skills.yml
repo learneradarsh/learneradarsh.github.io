@@ -1,10 +1,10 @@
 languages:
   - item: JavaScript
     level: 90
-    years: 5
+    years: 7
   - item: TypeScript
     level: 80
-    years: 4
+    years: 6
   - item: HTML
     level: 95
     years: 6
@@ -15,13 +15,13 @@ languages:
 frameworks:
   - item: React
     level: 85
-    years: 4
+    years: 7
   - item: Node.js
     level: 70
-    years: 3
+    years: 6
   - item: Angular
     level: 60
-    years: 2
+    years: 7
   - item: Bootstrap
     level: 75
     years: 4
@@ -43,7 +43,7 @@ others:
     years: 1
   - item: jQuery
     level: 70
-    years: 4
+    years: 5
   - item: AWS
     level: 50
     years: 2
