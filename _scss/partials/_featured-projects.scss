@@ -105,10 +105,20 @@
   .project-carousel {
     overflow: hidden;
     position: relative;
+    max-width: 100%;
+    height: 350px;
   }
 
   .project-carousel .project {
     display: none;
+    height: 100%;
+  }
+
+  .project-carousel .project img {
+    height: 100%;
+    width: auto;
+    max-height: 100%;
+    object-fit: contain;
   }
 
   .project-carousel .project.active {

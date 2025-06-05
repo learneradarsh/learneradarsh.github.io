@@ -4,9 +4,10 @@
 .featured-projects .carousel-prev,.featured-projects .carousel-next{position:absolute;top:50%;transform:translateY(-50%);background:none;border:none;font-size:2rem;color:#333;cursor:pointer;z-index:2}
 .featured-projects .carousel-prev{left:10px}
 .featured-projects .carousel-next{right:10px}
-.featured-projects .project-carousel{overflow:hidden;position:relative}
-.featured-projects .project-carousel .project{display:none}
+.featured-projects .project-carousel{overflow:hidden;position:relative;max-width:100%;height:350px}
+.featured-projects .project-carousel .project{display:none;height:100%};.featured-projects .project-carousel .project img{height:100%;width:auto;max-height:100%;object-fit:contain}
 .featured-projects .project-carousel .project.active{display:block}
 .featured-projects .section__title{text-align:center;margin-bottom:20px}
-.open-source canvas{max-width:100%;margin-bottom:10px}
+.open-source canvas{max-width:100%;margin-bottom:10px}.open-source .github-kpis{list-style:none;padding:0;margin:0 0 10px 0}.open-source .github-kpis li{margin:3px 0}
 .competitive-programming canvas{max-width:100%;margin-bottom:10px}
+#matrix-canvas{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;pointer-events:none}

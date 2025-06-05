@@ -1,6 +1,6 @@
 const chatData = [
   { keywords: ['hi', 'hello'], text: 'Hey there!' },
-  { keywords: ['name'], text: "I'm Adarsh Pandey, a front-end software engineer." },
+  { keywords: ['name'], text: "I'm Adarsh Pandey, a full stack developer." },
   { keywords: ['skills'], text: 'I work with JavaScript, TypeScript, React, Angular and more.' },
   { keywords: ['experience', 'work'], text: 'Currently Senior Developer 1 at Delta Airlines. Previously at Publicis Sapient and ThoughtWorks.' },
   { keywords: ['hobbies', 'interests'], text: 'I enjoy traveling and playing squash when not coding.' }

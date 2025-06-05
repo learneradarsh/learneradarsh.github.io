@@ -110,9 +110,20 @@
     Promise.all([repoReq, contribReq]).then(([u, c]) => {
       const repoCount = u.public_repos || 0;
       let contributions = 0;
+      let commitCount = 0;
+      let prCount = 0;
+      let issueCount = 0;
+      let longestStreak = 0;
+
       if (c.years && c.years.length) {
         const latest = c.years[c.years.length - 1];
-        contributions = latest.total;
+        contributions = latest.total || 0;
+        longestStreak = latest.longestStreak || 0;
+        if (latest.contributions) {
+          commitCount = latest.contributions.commitContributions || 0;
+          prCount = latest.contributions.pullRequestContributions || 0;
+          issueCount = latest.contributions.issueContributions || 0;
+        }
       }
 
       const chartEl = document.getElementById('github-stats-chart');
@@ -129,6 +140,17 @@
           options: { plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true } } }
         });
       }
+
+      const setText = (id, val) => {
+        const el = document.getElementById(id);
+        if (el) el.textContent = val;
+      };
+
+      setText('totalCommits', commitCount);
+      setText('totalPRs', prCount);
+      setText('totalIssues', issueCount);
+      setText('totalContributions', contributions);
+      setText('longestStreak', longestStreak);
     });
   }
 

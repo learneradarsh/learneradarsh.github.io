@@ -79,4 +79,32 @@ $(function() {
     if (prevBtn) prevBtn.addEventListener('click', () => showSlide(index - 1));
     if (nextBtn) nextBtn.addEventListener('click', () => showSlide(index + 1));
   }
+
+  const matrixCanvas = document.getElementById('matrix-canvas');
+  if (matrixCanvas) {
+    let width = matrixCanvas.width = window.innerWidth;
+    let height = matrixCanvas.height = window.innerHeight;
+    const columns = Math.floor(width / 20);
+    const drops = Array(columns).fill(0);
+    const ctx = matrixCanvas.getContext('2d');
+
+    const draw = () => {
+      ctx.fillStyle = 'rgba(0,0,0,0.05)';
+      ctx.fillRect(0, 0, width, height);
+      ctx.fillStyle = '#0F0';
+      ctx.font = '15px monospace';
+      drops.forEach((y, i) => {
+        const text = String.fromCharCode(0x30A0 + Math.random() * 96);
+        ctx.fillText(text, i * 20, y);
+        if (y > height && Math.random() > 0.975) drops[i] = 0;
+        else drops[i] = y + 20;
+      });
+    };
+
+    setInterval(draw, 50);
+    window.addEventListener('resize', () => {
+      width = matrixCanvas.width = window.innerWidth;
+      height = matrixCanvas.height = window.innerHeight;
+    });
+  }
 });
