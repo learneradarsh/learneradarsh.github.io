@@ -70,4 +70,48 @@
       line-height: 1.3;
     }
   }
+
+  .carousel-container {
+    position: relative;
+    text-align: center;
+  }
+
+  .section__title {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .carousel-prev,
+  .carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: $dark-grey;
+    cursor: pointer;
+    z-index: 2;
+  }
+
+  .carousel-prev {
+    left: 10px;
+  }
+
+  .carousel-next {
+    right: 10px;
+  }
+
+  .project-carousel {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .project-carousel .project {
+    display: none;
+  }
+
+  .project-carousel .project.active {
+    display: block;
+  }
 }
