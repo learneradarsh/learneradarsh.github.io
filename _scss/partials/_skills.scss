@@ -22,4 +22,14 @@
       }
     }
   }
+  .charts {
+    margin-top: 30px;
+    canvas {
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+    .github-heatmap {
+      max-width: 100%;
+    }
+  }
 }
