@@ -124,12 +124,17 @@
   }
 
   function fetchLeetCodeStats(user) {
-    if (!document.getElementById('leetcode-solved')) return;
     fetch(`https://leetcode-stats-api.herokuapp.com/${user}`)
       .then(r => r.json())
       .then(d => {
-        document.getElementById('leetcode-solved').textContent = d.totalSolved;
-        document.getElementById('leetcode-rank').textContent = d.ranking;
+        const solved = document.getElementById('leetcode-solved');
+        if (solved) solved.textContent = d.totalSolved;
+        const solved2 = document.getElementById('leetcode-solved-2');
+        if (solved2) solved2.textContent = d.totalSolved;
+        const rank = document.getElementById('leetcode-rank');
+        if (rank) rank.textContent = d.ranking;
+        const rank2 = document.getElementById('leetcode-rank-2');
+        if (rank2) rank2.textContent = d.ranking;
       })
       .catch(() => {});
   }
