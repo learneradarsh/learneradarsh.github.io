@@ -1,23 +1,52 @@
 languages:
-  - item: JavaScript (ES6)
+  - item: JavaScript
+    level: 90
+    years: 5
   - item: TypeScript
+    level: 80
+    years: 4
   - item: HTML
+    level: 95
+    years: 6
   - item: CSS/Sass
+    level: 90
+    years: 6
 
 frameworks:
   - item: React
-  - item: Node.JS
+    level: 85
+    years: 4
+  - item: Node.js
+    level: 70
+    years: 3
   - item: Angular
-  - item: React.JS
+    level: 60
+    years: 2
   - item: Bootstrap
+    level: 75
+    years: 4
 
 tools:
   - item: Postman
+    level: 80
+    years: 3
   - item: Docker
+    level: 65
+    years: 2
 
 others:
   - item: Wordpress
+    level: 70
+    years: 3
   - item: Joomla
-  - item: Jquery
+    level: 40
+    years: 1
+  - item: jQuery
+    level: 70
+    years: 4
   - item: AWS
+    level: 50
+    years: 2
   - item: Figma
+    level: 60
+    years: 1

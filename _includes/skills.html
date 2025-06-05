@@ -36,5 +36,12 @@
         </ul>
       </div>
     </div>
+    <div class="charts">
+      <canvas id="skillRadar" width="400" height="400"
+        data-skills='{{ site.data.skill_chart | jsonify }}'></canvas>
+      <canvas id="experienceBar" width="400" height="300"
+        data-skills='{{ site.data.skill_chart | jsonify }}'></canvas>
+      <div id="github-heatmap" class="github-heatmap"></div>
+    </div>
   </div>
 </section>

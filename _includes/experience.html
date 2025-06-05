@@ -1,20 +1,25 @@
 <section class="section experience">
   <div class="section__title">Experience</div>
   <div class="section__content">
-    <div class="jobs">
+    <ul class="timeline">
       {% for job in site.data.experience %}
-      <div class="job">
-        <div class="time-place">
-          <div class="job__company">
-            <a href="{{job.url}}" target="_blank">{{job.company}}</a>
-          </div>
-          <div class="job__time">{{job.time}}</div>
+      <li class="timeline__item">
+        <div class="timeline__node">
+          <span class="job__time">{{ job.time }}</span> -
+          <a class="job__company" href="{{ job.url }}" target="_blank">{{ job.company }}</a>
+          <span class="job__position">{{ job.position }}</span>
         </div>
-        <div class="job__position">{{job.position}}</div>
-        <!-- <pre>{{job.description}}</pre> -->
-      </div>
+        <div class="timeline__details">
+          {% assign lines = job.description | newline_to_br | split:'<br />' %}
+          <ul>
+          {% for line in lines %}
+            {% if line != '' %}<li>{{ line }}</li>{% endif %}
+          {% endfor %}
+          </ul>
+        </div>
+      </li>
       {% endfor %}
-    </div>
+    </ul>
 
     <a href="{{site.linkedin}}" target="_blank" class="arrow-link">View My Linkedin</a>
   </div>
