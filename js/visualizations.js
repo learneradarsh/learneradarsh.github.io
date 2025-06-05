@@ -103,9 +103,43 @@
     observer.observe(el);
   }
 
+  function fetchGitHubStats(user) {
+    if (!document.getElementById('repo-count')) return;
+    fetch(`https://api.github.com/users/${user}`)
+      .then(r => r.json())
+      .then(d => {
+        document.getElementById('repo-count').textContent = d.public_repos;
+      })
+      .catch(() => {});
+
+    fetch(`https://github-contributions-api.jogruber.de/v4/${user}`)
+      .then(r => r.json())
+      .then(d => {
+        if (d.years && d.years.length) {
+          const latest = d.years[d.years.length - 1];
+          document.getElementById('contrib-count').textContent = latest.total;
+        }
+      })
+      .catch(() => {});
+  }
+
+  function fetchLeetCodeStats(user) {
+    if (!document.getElementById('leetcode-solved')) return;
+    fetch(`https://leetcode-stats-api.herokuapp.com/${user}`)
+      .then(r => r.json())
+      .then(d => {
+        document.getElementById('leetcode-solved').textContent = d.totalSolved;
+        document.getElementById('leetcode-rank').textContent = d.ranking;
+      })
+      .catch(() => {});
+  }
+
   onVisible(radarEl, buildRadar);
   onVisible(barEl, buildBar);
   onVisible(codeRatioEl, buildCodeRatio);
+
+  fetchGitHubStats('learneradarsh');
+  fetchLeetCodeStats('learneradarsh');
 
   // GitHub heatmap
   if (document.getElementById('github-heatmap')) {
@@ -116,6 +150,18 @@
   document.querySelectorAll('.timeline__node').forEach(node => {
     node.addEventListener('click', () => {
       node.parentElement.classList.toggle('active');
+    });
+  });
+
+  document.querySelectorAll('.project[data-repo]').forEach(project => {
+    project.addEventListener('click', () => {
+      const repo = project.dataset.repo;
+      fetch(`https://api.github.com/repos/${repo}`)
+        .then(r => r.json())
+        .then(d => {
+          alert(`${repo}\nStars: ${d.stargazers_count}\nForks: ${d.forks_count}`);
+        })
+        .catch(() => {});
     });
   });
 })();
