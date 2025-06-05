@@ -104,37 +104,53 @@
   }
 
   function fetchGitHubStats(user) {
-    if (!document.getElementById('repo-count')) return;
-    fetch(`https://api.github.com/users/${user}`)
-      .then(r => r.json())
-      .then(d => {
-        document.getElementById('repo-count').textContent = d.public_repos;
-      })
-      .catch(() => {});
+    const repoReq = fetch(`https://api.github.com/users/${user}`).then(r => r.json()).catch(() => ({}));
+    const contribReq = fetch(`https://github-contributions-api.jogruber.de/v4/${user}`).then(r => r.json()).catch(() => ({}));
 
-    fetch(`https://github-contributions-api.jogruber.de/v4/${user}`)
-      .then(r => r.json())
-      .then(d => {
-        if (d.years && d.years.length) {
-          const latest = d.years[d.years.length - 1];
-          document.getElementById('contrib-count').textContent = latest.total;
-        }
-      })
-      .catch(() => {});
+    Promise.all([repoReq, contribReq]).then(([u, c]) => {
+      const repoCount = u.public_repos || 0;
+      let contributions = 0;
+      if (c.years && c.years.length) {
+        const latest = c.years[c.years.length - 1];
+        contributions = latest.total;
+      }
+
+      const chartEl = document.getElementById('github-stats-chart');
+      if (chartEl) {
+        new Chart(chartEl, {
+          type: 'bar',
+          data: {
+            labels: ['Repos', 'Contributions'],
+            datasets: [{
+              data: [repoCount, contributions],
+              backgroundColor: ['rgba(54,162,235,0.6)', 'rgba(255,99,132,0.6)']
+            }]
+          },
+          options: { plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true } } }
+        });
+      }
+    });
   }
 
   function fetchLeetCodeStats(user) {
     fetch(`https://leetcode-stats-api.herokuapp.com/${user}`)
       .then(r => r.json())
       .then(d => {
-        const solved = document.getElementById('leetcode-solved');
-        if (solved) solved.textContent = d.totalSolved;
-        const solved2 = document.getElementById('leetcode-solved-2');
-        if (solved2) solved2.textContent = d.totalSolved;
-        const rank = document.getElementById('leetcode-rank');
-        if (rank) rank.textContent = d.ranking;
-        const rank2 = document.getElementById('leetcode-rank-2');
-        if (rank2) rank2.textContent = d.ranking;
+        const solved = d.totalSolved || 0;
+        const chartEl = document.getElementById('leetcode-stats-chart');
+        if (chartEl) {
+          new Chart(chartEl, {
+            type: 'bar',
+            data: {
+              labels: ['Solved'],
+              datasets: [{
+                data: [solved],
+                backgroundColor: 'rgba(75,192,192,0.6)'
+              }]
+            },
+            options: { plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true } } }
+          });
+        }
       })
       .catch(() => {});
   }

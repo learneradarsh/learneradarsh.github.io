@@ -63,4 +63,20 @@ $(function() {
   sr.reveal('.experience', { viewFactor: 0.2 });
   sr.reveal('.featured-projects', { viewFactor: 0.1 });
   sr.reveal('.other-projects', { viewFactor: 0.05 });
+
+  const carousel = document.querySelector('.project-carousel');
+  if (carousel) {
+    const slides = carousel.querySelectorAll('.project');
+    let index = 0;
+    slides[index].classList.add('active');
+    const showSlide = i => {
+      slides[index].classList.remove('active');
+      index = (i + slides.length) % slides.length;
+      slides[index].classList.add('active');
+    };
+    const prevBtn = document.querySelector('.carousel-prev');
+    const nextBtn = document.querySelector('.carousel-next');
+    if (prevBtn) prevBtn.addEventListener('click', () => showSlide(index - 1));
+    if (nextBtn) nextBtn.addEventListener('click', () => showSlide(index + 1));
+  }
 });
