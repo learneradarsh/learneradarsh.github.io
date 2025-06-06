@@ -2,6 +2,7 @@
   <div class="section__title">Experience</div>
   <div class="section__content">
     <div class="experience-summary">More than 7 years of professional web development experience.</div>
+    <canvas id="experienceChart" width="600" height="300" data-experience='{{ site.data.experience_chart | jsonify }}'></canvas>
     <ul class="timeline">
       {% for job in site.data.experience %}
       <li class="timeline__item">
