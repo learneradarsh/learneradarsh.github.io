@@ -103,55 +103,36 @@
     observer.observe(el);
   }
 
-  function fetchGitHubStats(user) {
-    const repoReq = fetch(`https://api.github.com/users/${user}`).then(r => r.json()).catch(() => ({}));
-    const contribReq = fetch(`https://github-contributions-api.jogruber.de/v4/${user}`).then(r => r.json()).catch(() => ({}));
+  function fetchGitHubStats() {
+    const contributions = 120;
+    const commitCount = 2181;
+    const issueCount = 24;
+    const starCount = 14;
 
-    Promise.all([repoReq, contribReq]).then(([u, c]) => {
-      const repoCount = u.public_repos || 0;
-      let contributions = 0;
-      let commitCount = 0;
-      let prCount = 0;
-      let issueCount = 0;
-      let longestStreak = 0;
+    const chartEl = document.getElementById('github-stats-chart');
+    if (chartEl) {
+      new Chart(chartEl, {
+        type: 'bar',
+        data: {
+          labels: ['Stars', 'Contributions'],
+          datasets: [{
+            data: [starCount, contributions],
+            backgroundColor: ['rgba(54,162,235,0.6)', 'rgba(255,99,132,0.6)']
+          }]
+        },
+        options: { plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true } } }
+      });
+    }
 
-      if (c.years && c.years.length) {
-        const latest = c.years[c.years.length - 1];
-        contributions = latest.total || 0;
-        longestStreak = latest.longestStreak || 0;
-        if (latest.contributions) {
-          commitCount = latest.contributions.commitContributions || 0;
-          prCount = latest.contributions.pullRequestContributions || 0;
-          issueCount = latest.contributions.issueContributions || 0;
-        }
-      }
+    const setText = (id, val) => {
+      const el = document.getElementById(id);
+      if (el) el.textContent = val;
+    };
 
-      const chartEl = document.getElementById('github-stats-chart');
-      if (chartEl) {
-        new Chart(chartEl, {
-          type: 'bar',
-          data: {
-            labels: ['Repos', 'Contributions'],
-            datasets: [{
-              data: [repoCount, contributions],
-              backgroundColor: ['rgba(54,162,235,0.6)', 'rgba(255,99,132,0.6)']
-            }]
-          },
-          options: { plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true } } }
-        });
-      }
-
-      const setText = (id, val) => {
-        const el = document.getElementById(id);
-        if (el) el.textContent = val;
-      };
-
-      setText('totalCommits', commitCount);
-      setText('totalPRs', prCount);
-      setText('totalIssues', issueCount);
-      setText('totalContributions', contributions);
-      setText('longestStreak', longestStreak);
-    });
+    setText('totalCommits', commitCount);
+    setText('totalIssues', issueCount);
+    setText('totalContributions', contributions);
+    setText('totalStars', starCount);
   }
 
   function fetchLeetCodeStats(user) {
@@ -181,7 +162,7 @@
   onVisible(barEl, buildBar);
   onVisible(codeRatioEl, buildCodeRatio);
 
-  fetchGitHubStats('learneradarsh');
+  fetchGitHubStats();
   fetchLeetCodeStats('learneradarsh');
 
   // GitHub heatmap
