@@ -113,7 +113,6 @@
       let commitCount = 0;
       let prCount = 0;
       let issueCount = 0;
-      let starCount = 0;
       let longestStreak = 0;
 
       if (c.years && c.years.length) {
@@ -127,20 +126,15 @@
         }
       }
 
-      contributions += 120;
-      commitCount += 181;
-      issueCount = 24;
-      starCount = 14;
-
       const chartEl = document.getElementById('github-stats-chart');
       if (chartEl) {
         new Chart(chartEl, {
           type: 'bar',
           data: {
-            labels: ['Repos', 'Contributions', 'Commits'],
+            labels: ['Repos', 'Contributions'],
             datasets: [{
-              data: [repoCount, contributions, commitCount],
-              backgroundColor: ['rgba(54,162,235,0.6)', 'rgba(255,99,132,0.6)', 'rgba(75,192,192,0.6)']
+              data: [repoCount, contributions],
+              backgroundColor: ['rgba(54,162,235,0.6)', 'rgba(255,99,132,0.6)']
             }]
           },
           options: { plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true } } }
@@ -155,7 +149,6 @@
       setText('totalCommits', commitCount);
       setText('totalPRs', prCount);
       setText('totalIssues', issueCount);
-      setText('totalStars', starCount);
       setText('totalContributions', contributions);
       setText('longestStreak', longestStreak);
     });
