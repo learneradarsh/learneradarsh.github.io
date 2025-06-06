@@ -84,8 +84,7 @@ strong {
 }
 
 .section {
-  display: flex;
-  justify-content: center;
+  display: block;
   padding: 100px 170px;
   @include thirteen {
     padding: 100px;
@@ -94,42 +93,42 @@ strong {
     padding: 50px;
   }
   @include tablet {
-    display: block;
+    /* layout already stacked */
   }
   @include mobile {
     padding: 50px 35px;
   }
   &__title {
-    flex-shrink: 0;
-    width: 200px;
-    margin-right: 70px;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
     color: $blue;
     text-transform: uppercase;
-    text-align: right;
+    text-align: left;
     font-weight: 700;
     letter-spacing: 2px;
     @include desktop {
-      margin-right: 50px;
+      margin-right: 0;
     }
     @include little-desktop {
-      width: 150px;
+      width: 100%;
     }
     @include tablet {
       text-align: left;
-      width: auto;
+      width: 100%;
     }
   }
   &__content {
     font-weight: 300;
     font-size: 1rem;
     width: 100%;
-    max-width: 650px;
+    max-width: 100%;
     @include tablet {
       padding-top: 30px;
-      padding-left: 50px;
+      padding-left: 0;
     }
     @include mobile {
-      padding-left: 30px;
+      padding-left: 0;
     }
     p {
       margin-top: 0;
@@ -247,4 +246,5 @@ strong {
   height: 100%;
   z-index: -1;
   pointer-events: none;
+  opacity: 0.15;
 }
