@@ -13,12 +13,22 @@
       <span>Hiring&quest;</span>
       <span class="emoji pointer"></span>
 
-  <span>
-    <a href="resume.pdf" target="_blank" rel="noopener" id="resume-link" class="highlight-link">Download Resume</a>
-  </span>
+      <span>
+        <a href="#" id="resume-link" class="highlight-link">Download Resume</a>
+      </span>
     </h3>
   </div>
   <div class="intro__right">
-    <img id="animeImage" src="/img/anime.svg" alt="Anime character" style="width:100%;height:100%;display:block;" />
+    <canvas id="techCanvas"></canvas>
+  </div>
+  <div id="resume-modal" class="modal">
+    <div class="modal-content">
+      <span id="modal-close">&times;</span>
+      <p>Enter your email to download the resume:</p>
+      <form id="resume-form">
+        <input type="email" id="resume-email" required placeholder="Your email" />
+        <button type="submit">Download</button>
+      </form>
+    </div>
   </div>
 </header>
