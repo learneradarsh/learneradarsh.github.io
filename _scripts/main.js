@@ -80,31 +80,33 @@ $(function() {
     if (nextBtn) nextBtn.addEventListener('click', () => showSlide(index + 1));
   }
 
-  const matrixCanvas = document.getElementById('matrix-canvas');
-  if (matrixCanvas) {
-    let width = matrixCanvas.width = window.innerWidth;
-    let height = matrixCanvas.height = window.innerHeight;
-    const columns = Math.floor(width / 20);
-    const drops = Array(columns).fill(0);
-    const ctx = matrixCanvas.getContext('2d');
+  const starCanvas = document.getElementById('star-canvas');
+  if (starCanvas) {
+    let width = starCanvas.width = window.innerWidth;
+    let height = starCanvas.height = window.innerHeight;
+    const ctx = starCanvas.getContext('2d');
+    const stars = Array.from({ length: 200 }, () => ({
+      x: Math.random() * width,
+      y: Math.random() * height,
+      size: Math.random() * 2 + 1,
+    }));
 
-    const draw = () => {
-      ctx.fillStyle = 'rgba(0,0,0,0.05)';
-      ctx.fillRect(0, 0, width, height);
-      ctx.fillStyle = '#0F0';
-      ctx.font = '15px monospace';
-      drops.forEach((y, i) => {
-        const text = String.fromCharCode(0x30A0 + Math.random() * 96);
-        ctx.fillText(text, i * 20, y);
-        if (y > height && Math.random() > 0.975) drops[i] = 0;
-        else drops[i] = y + 20;
+    const drawStars = () => {
+      ctx.clearRect(0, 0, width, height);
+      const offset = window.scrollY * 0.2;
+      ctx.fillStyle = '#0ff';
+      stars.forEach(s => {
+        const y = (s.y + offset) % height;
+        ctx.fillRect(s.x, y, s.size, s.size);
       });
     };
 
-    setInterval(draw, 50);
+    drawStars();
+    window.addEventListener('scroll', drawStars);
     window.addEventListener('resize', () => {
-      width = matrixCanvas.width = window.innerWidth;
-      height = matrixCanvas.height = window.innerHeight;
+      width = starCanvas.width = window.innerWidth;
+      height = starCanvas.height = window.innerHeight;
+      drawStars();
     });
   }
 });
