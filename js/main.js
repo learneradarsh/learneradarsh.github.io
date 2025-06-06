@@ -111,10 +111,22 @@ $(function() {
   }
 
   const resumeLink = document.getElementById('resume-link');
-  if (resumeLink) {
+  const resumeModal = document.getElementById('resume-modal');
+  const modalClose = document.getElementById('modal-close');
+  const resumeForm = document.getElementById('resume-form');
+
+  if (resumeLink && resumeModal && modalClose && resumeForm) {
     resumeLink.addEventListener('click', e => {
       e.preventDefault();
-      window.open('resume.pdf', '_blank');
+      resumeModal.classList.add('show');
+    });
+    modalClose.addEventListener('click', () => {
+      resumeModal.classList.remove('show');
+    });
+    resumeForm.addEventListener('submit', e => {
+      e.preventDefault();
+      resumeModal.classList.remove('show');
+      window.open('https://drive.google.com/file/d/1AX5VMlGrS8XHuldPwF3mcw_GWYdynL2g/view?usp=sharing', '_blank');
     });
   }
 });
