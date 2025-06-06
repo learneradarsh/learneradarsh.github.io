@@ -134,10 +134,15 @@
       new Chart(chartEl, {
         type: 'bar',
         data: {
-          labels: ['Stars', 'Contributions'],
+          labels: ['Contributions', 'Commits', 'Issues', 'Stars'],
           datasets: [{
-            data: [starCount, contributions],
-            backgroundColor: ['rgba(54,162,235,0.6)', 'rgba(255,99,132,0.6)']
+            data: [contributions, commitCount, issueCount, starCount],
+            backgroundColor: [
+              'rgba(255,99,132,0.6)',
+              'rgba(54,162,235,0.6)',
+              'rgba(255,206,86,0.6)',
+              'rgba(75,192,192,0.6)'
+            ]
           }]
         },
         options: { plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true } } }
@@ -155,27 +160,24 @@
     setText('totalStars', starCount);
   }
 
-  function fetchLeetCodeStats(user) {
-    fetch(`https://leetcode-stats-api.herokuapp.com/${user}`)
-      .then(r => r.json())
-      .then(d => {
-        const solved = d.totalSolved || 0;
-        const chartEl = document.getElementById('leetcode-stats-chart');
-        if (chartEl) {
-          new Chart(chartEl, {
-            type: 'bar',
-            data: {
-              labels: ['Solved'],
-              datasets: [{
-                data: [solved],
-                backgroundColor: 'rgba(75,192,192,0.6)'
-              }]
-            },
-            options: { plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true } } }
-          });
-        }
-      })
-      .catch(() => {});
+  function buildLeetCodeStats() {
+    const easy = { label: 'Easy 23/880', value: 23 };
+    const medium = { label: 'Medium 6/1852', value: 6 };
+    const hard = { label: 'Hard 0/839', value: 0 };
+    const chartEl = document.getElementById('leetcode-stats-chart');
+    if (chartEl) {
+      new Chart(chartEl, {
+        type: 'bar',
+        data: {
+          labels: [easy.label, medium.label, hard.label],
+          datasets: [{
+            data: [easy.value, medium.value, hard.value],
+            backgroundColor: ['#81c784', '#64b5f6', '#e57373']
+          }]
+        },
+        options: { plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true } } }
+      });
+    }
   }
 
   onVisible(radarEl, buildRadar);
@@ -184,7 +186,7 @@
   onVisible(expChartEl, buildExperienceChart);
 
   fetchGitHubStats();
-  fetchLeetCodeStats('learneradarsh');
+  buildLeetCodeStats();
 
   // GitHub heatmap
   if (document.getElementById('github-heatmap')) {
