@@ -1,6 +1,7 @@
 (function() {
   const radarEl = document.getElementById('skillRadar');
   const barEl = document.getElementById('experienceBar');
+  const expChartEl = document.getElementById('experienceChart');
 
   function buildRadar() {
     if (!radarEl) return;
@@ -63,6 +64,25 @@
     });
   }
 
+  function buildExperienceChart() {
+    if (!expChartEl) return;
+    const data = JSON.parse(expChartEl.dataset.experience);
+    const labels = data.map(d => d.company);
+    const values = data.map(d => d.years);
+    new Chart(expChartEl, {
+      type: 'bar',
+      data: {
+        labels: labels,
+        datasets: [{
+          label: 'Years',
+          data: values,
+          backgroundColor: 'rgba(153, 102, 255, 0.6)'
+        }]
+      },
+      options: { plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true } } }
+    });
+  }
+
   function onVisible(el, callback) {
     if (!el) return;
     const observer = new IntersectionObserver(entries => {
@@ -78,6 +98,7 @@
 
   onVisible(radarEl, buildRadar);
   onVisible(barEl, buildBar);
+  onVisible(expChartEl, buildExperienceChart);
 
   function fetchGitHubStats() {
     const contributions = 120;
