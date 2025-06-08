@@ -1,3 +1,21 @@
+- name: WebVitals
+  url: https://github.com/learneradarsh/WebVitals
+  code: https://github.com/learneradarsh/WebVitals
+  description: Web Vitals SDK is a lightweight JavaScript library designed to help developers monitor and collect performance metrics such as Largest Contentful Paint (LCP), First Contentful Paint (FCP), and other Core Web Vitals for their frontend applications.
+  used:
+    - thing: Javascript
+    - thing: HTML
+    - thing: Web Vitals
+
+- name: FOUT
+  url: https://github.com/learneradarsh/FOUT
+  code: https://github.com/learneradarsh/FOUT
+  description: Font Loading Optimizer is a JavaScript library that helps optimize the loading of web fonts, preventing issues like Flash of Unstyled Text (FOUT) and Flash of Invisible Text (FOIT). By applying modern font loading techniques, this library improves website performance, reduces layout shifts, and enhances the overall user experience.
+  used:
+    - thing: Javascript
+    - thing: HTML
+    - thing: CSS
+
 - name: UICAP
   url: https://github.com/MozillaKNITOpenSource/UICAP
   code: https://github.com/MozillaKNITOpenSource/UICAP
