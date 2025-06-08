@@ -111,13 +111,21 @@
       new Chart(chartEl, {
         type: 'bar',
         data: {
-          labels: ['Stars', 'Contributions'],
+          labels: ['Stars', 'Contributions', 'Commits', 'Issues'],
           datasets: [{
-            data: [starCount, contributions],
-            backgroundColor: ['rgba(54,162,235,0.6)', 'rgba(255,99,132,0.6)']
+            data: [starCount, contributions, commitCount, issueCount],
+            backgroundColor: [
+              'rgba(54,162,235,0.6)',
+              'rgba(255,99,132,0.6)',
+              'rgba(75,192,192,0.6)',
+              'rgba(153,102,255,0.6)'
+            ]
           }]
         },
-        options: { plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true } } }
+        options: {
+          plugins: { legend: { display: false } },
+          scales: { y: { beginAtZero: true } }
+        }
       });
     }
     const setText = (id, val) => {
