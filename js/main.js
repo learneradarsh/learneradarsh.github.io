@@ -82,31 +82,43 @@ $(function() {
 
   const starCanvas = document.getElementById('star-canvas');
   if (starCanvas) {
-    let width = starCanvas.width = window.innerWidth;
-    let height = starCanvas.height = window.innerHeight;
-    const ctx = starCanvas.getContext('2d');
-    const stars = Array.from({ length: 200 }, () => ({
-      x: Math.random() * width,
-      y: Math.random() * height,
-      size: Math.random() * 2 + 1,
-    }));
+    const renderer = new THREE.WebGLRenderer({ canvas: starCanvas, alpha: true });
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(
+      75,
+      window.innerWidth / window.innerHeight,
+      1,
+      1000
+    );
+    camera.position.z = 5;
 
-    const drawStars = () => {
-      ctx.clearRect(0, 0, width, height);
-      const offset = window.scrollY * 0.2;
-      ctx.fillStyle = '#0ff';
-      stars.forEach(s => {
-        const y = (s.y + offset) % height;
-        ctx.fillRect(s.x, y, s.size, s.size);
-      });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+
+    const geometry = new THREE.BufferGeometry();
+    const vertices = [];
+    for (let i = 0; i < 1000; i += 1) {
+      vertices.push((Math.random() - 0.5) * 50);
+      vertices.push((Math.random() - 0.5) * 50);
+      vertices.push((Math.random() - 0.5) * 50);
+    }
+    geometry.setAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
+    const material = new THREE.PointsMaterial({ color: '#ffffff', size: 0.2 });
+    const stars = new THREE.Points(geometry, material);
+    scene.add(stars);
+
+    const animate = () => {
+      requestAnimationFrame(animate);
+      stars.rotation.x += 0.0005;
+      stars.rotation.y += 0.0005;
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.render(scene, camera);
     };
+    animate();
 
-    drawStars();
-    window.addEventListener('scroll', drawStars);
     window.addEventListener('resize', () => {
-      width = starCanvas.width = window.innerWidth;
-      height = starCanvas.height = window.innerHeight;
-      drawStars();
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
     });
   }
 
