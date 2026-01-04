@@ -1,10 +1,9 @@
 import TechRadar from "../components/TechRadar";
 import ImpactMetrics from "../components/ImpactMetrics";
+import TechCategory from "../components/TechCategory";
 
 import Header from "../components/Header";
-import SkillCard from "../components/SkillCard";
 import ProjectCard from "../components/ProjectCard";
-import WhyCard from "../components/WhyCard";
 import ValueCard from "../components/ValueCard";
 import AIToolCard from "../components/AIToolCard";
 import AwardCard from "../components/AwardCard";
@@ -98,15 +97,38 @@ export default function Home() {
           </div>
         </Section>
 
+
+
         {/* ================= SKILLS ================= */}
         <Section title="Technical Expertise">
-           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-             {/* Text Skills */}
-             <div className="lg:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-6">
-                <SkillCard title="Frontend Architecture" skills="Angular, React, Next.js, Micro-frontends, Nx Monorepos" />
-                <SkillCard title="Backend & Cloud" skills="Node.js, AWS (Lambda, S3, DynamoDB), Redis, API Gateway" />
-                <SkillCard title="Leadership & Process" skills="CI/CD, Agile, Mentoring, Code Reviews, System Design" />
-             </div>
+           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+             {/* Frontend */}
+             <TechCategory 
+               title="Frontend Ecosystem"
+               icon={<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 7h-9"/><path d="M14 17H5"/><circle cx="17" cy="17" r="3"/><circle cx="7" cy="7" r="3"/></svg>}
+               skills={["React", "Angular", "Next.js", "TypeScript", "Tailwind CSS", "Micro-frontends", "Nx Monorepos", "Redux/NgRx"]}
+             />
+
+             {/* Backend */}
+             <TechCategory 
+               title="Backend & Cloud"
+               icon={<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>}
+               skills={["Node.js", "Express", "AWS Lambda", "DynamoDB", "API Gateway", "Redis", "System Design", "Microservices"]}
+             />
+
+             {/* DSA */}
+             <TechCategory 
+               title="Data Structures & Algorithms"
+               icon={<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>}
+               skills={["Graph Algorithms", "Dynamic Programming", "Tree Traversals", "Hash Maps & Sets", "Time Complexity Analysis", "LeetCode Solved"]}
+             />
+
+             {/* Performance */}
+             <TechCategory 
+               title="Performance & Engineering"
+               icon={<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2v4"/><path d="M12 18v4"/><path d="M4.93 4.93l2.83 2.83"/><path d="M16.24 16.24l2.83 2.83"/><path d="M2 12h4"/><path d="M18 12h4"/><path d="M4.93 19.07l2.83-2.83"/><path d="M16.24 7.76l2.83-2.83"/></svg>}
+               skills={["Core Web Vitals", "Code Splitting", "Lazy Loading", "Server-Side Rendering", "CI/CD Pipelines", "Unit Testing (Jest)", "Lighthouse"]}
+             />
            </div>
         </Section>
 
@@ -268,6 +290,10 @@ export default function Home() {
         {/* ================= ACHIEVEMENTS ================= */}
 <Section title="Achievements">
   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+     <AwardCard
+      highlight
+      text="Above & Beyond Year End Award — Delta Airlines (2025)"
+    />
     <AwardCard
       highlight
       text="Above & Beyond Year End Award — Delta Airlines (2023)"
