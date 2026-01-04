@@ -1,7 +1,7 @@
-import Header from "../components/Header";
-import AbstractVisual from "../components/AbstractVisual";
-import MetricCard from "../components/MetricCard";
+import TechRadar from "../components/TechRadar";
+import ImpactMetrics from "../components/ImpactMetrics";
 
+import Header from "../components/Header";
 import SkillCard from "../components/SkillCard";
 import ProjectCard from "../components/ProjectCard";
 import WhyCard from "../components/WhyCard";
@@ -19,31 +19,26 @@ export default function Home() {
       <main className="bg-neutral-950 text-white min-h-screen">
         {/* ================= HERO ================= */}
         <section className="relative overflow-hidden">
-          <div className="max-w-7xl mx-auto px-6 pt-36 pb-28 grid grid-cols-1 lg:grid-cols-2 gap-20">
+          <div className="max-w-7xl mx-auto px-6 pt-36 pb-28 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div>
-              <p className="text-emerald-400 text-sm tracking-wide">
+              <p className="text-emerald-400 text-sm tracking-wide uppercase font-semibold mb-4">
                 Senior Full-Stack Engineer · Tech Lead · AI-Driven
               </p>
 
-              <h1 className="mt-6 text-4xl md:text-6xl font-semibold leading-tight">
-                I build scalable,
-                <br />
-                high-impact systems
-                <br />
-                used by millions.
+              <h1 className="text-5xl md:text-7xl font-bold leading-tight tracking-tight mb-8">
+                I build <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">scalable</span> systems.
               </h1>
 
-              <p className="mt-6 text-gray-300 max-w-xl text-lg">
-                Senior Full-Stack Engineer and Tech Lead with 7+ years of
-                experience across frontend, backend, cloud, and AI systems.
-                I lead teams, own architecture, and ship under real-world
-                constraints for 100M+ users.
+              <p className="text-gray-300 max-w-xl text-lg leading-relaxed mb-10">
+                Senior Tech Lead with 7+ years of experience. I don't just write code; 
+                I design resilient architectures, lead high-performing teams, and deliver 
+                business value for 100M+ users.
               </p>
 
-              <div className="mt-10 flex flex-wrap gap-6">
+              <div className="flex flex-wrap gap-4 mb-14">
                 <a
                   href="#experience"
-                  className="px-6 py-3 rounded-lg bg-emerald-400 text-black font-medium hover:bg-emerald-300 transition"
+                  className="px-8 py-4 rounded-full bg-emerald-500 text-black font-bold hover:bg-emerald-400 transition shadow-[0_0_20px_rgba(16,185,129,0.3)]"
                 >
                   View Experience
                 </a>
@@ -52,22 +47,20 @@ export default function Home() {
                   href="https://drive.google.com/file/d/1YYKPxAXHBIP_GBwjLSXs098mdNsa4cFS/view"
                   target="_blank"
                   rel="noreferrer"
-                  className="px-6 py-3 rounded-lg border border-white/20 hover:border-white/40 transition"
+                  className="px-8 py-4 rounded-full border border-white/20 hover:bg-white/5 transition font-medium"
                 >
                   Download Resume
                 </a>
               </div>
 
-              <div className="mt-14 grid grid-cols-2 sm:grid-cols-4 gap-4">
-                <MetricCard value="100M+" label="Users Impacted" />
-                <MetricCard value="7+" label="Years Experience" />
-                <MetricCard value="4–10" label="Engineers Led" />
-                <MetricCard value="38%" label="Regression Reduction" />
-              </div>
+              <ImpactMetrics />
             </div>
 
-            <div className="relative h-[520px] hidden lg:block">
-              <AbstractVisual />
+            <div className="relative hidden lg:flex justify-center">
+               {/* Replaced AbstractVisual with TechRadar for immediate "Tech Lead" signal */}
+               <div className="scale-110">
+                 <TechRadar />
+               </div>
             </div>
           </div>
         </section>
@@ -90,38 +83,16 @@ export default function Home() {
           </div>
         </Section>
 
-        {/* ================= WHY HIRE ME ================= */}
-        <Section title="Why you should hire me">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-            <WhyCard
-              title="I think in systems"
-              desc="I optimize architecture, performance, and maintainability — not just features."
-            />
-            <WhyCard
-              title="I deliver under constraints"
-              desc="Inflight connectivity, tight timelines, and enterprise scale are my daily environment."
-            />
-            <WhyCard
-              title="I raise engineering standards"
-              desc="Improved coverage, eliminated lint debt, enforced clean code and CI discipline."
-            />
-            <WhyCard
-              title="Full-stack ownership"
-              desc="Comfortable owning UI, APIs, cloud, CI/CD, and AI workflows end-to-end."
-            />
-          </div>
-        </Section>
-
         {/* ================= SKILLS ================= */}
-        <Section title="Skills">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <SkillCard title="Frontend Frameworks" skills="Angular, React, Next.js" />
-            <SkillCard title="Backend" skills="Node.js, Express.js, Redis, CDN strategies, API rate limiting" />
-            <SkillCard title="Cloud & DevOps" skills="AWS Lambda, S3, DynamoDB, API Gateway" />
-            <SkillCard title="Programming & Others" skills="TypeScript, Python, Jest, Lighthouse, NgRx, Redux, CI/CD" />
-            <SkillCard title="Performance Optimization" skills="Web Performance, Accessibility, SEO, Nx Monorepos" />
-            <SkillCard title="AI & ML Tools" skills="OpenAI API, LangChain, HuggingFace, Prompt Engineering" />
-          </div>
+        <Section title="Technical Expertise">
+           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+             {/* Text Skills */}
+             <div className="lg:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-6">
+                <SkillCard title="Frontend Architecture" skills="Angular, React, Next.js, Micro-frontends, Nx Monorepos" />
+                <SkillCard title="Backend & Cloud" skills="Node.js, AWS (Lambda, S3, DynamoDB), Redis, API Gateway" />
+                <SkillCard title="Leadership & Process" skills="CI/CD, Agile, Mentoring, Code Reviews, System Design" />
+             </div>
+           </div>
         </Section>
 
         {/* ================= AI TOOLS ================= */}
@@ -152,6 +123,9 @@ export default function Home() {
     <BarGraph label="Moonraft Innovation Labs" value={1.0} />
     <BarGraph label="LearnShiz Techies" value={0.7} />
   </div>
+
+  <div className="relative border-l border-white/10 md:border-none ml-4 md:ml-0 pl-6 md:pl-0 space-y-8">
+
 
   {/* ===== DELTA AIRLINES ===== */}
   <ExperienceCard
@@ -227,6 +201,7 @@ export default function Home() {
       "Created RAPID modules to deliver fast POCs for business meetings and early validation."
     ]}
   />
+  </div>
 </Section>
 
 
