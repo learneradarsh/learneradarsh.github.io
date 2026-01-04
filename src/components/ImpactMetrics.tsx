@@ -9,11 +9,11 @@ type MetricProps = {
 
 function MetricItem({ value, label, subtext, color = "text-emerald-400" }: MetricProps) {
   return (
-    <div className="flex flex-col items-center text-center p-4 bg-white/5 rounded-xl border border-white/10 hover:border-emerald-500/30 transition-colors group">
+    <div className="flex flex-col items-center text-center p-6 bg-white/5 rounded-xl border border-white/10 hover:border-emerald-500/30 transition-colors group">
       <div className={`text-4xl md:text-5xl font-bold ${color} mb-2 group-hover:scale-110 transition-transform`}>
         {value}
       </div>
-      <div className="text-white font-medium text-lg">{label}</div>
+      <div className="text-white font-medium text-lg whitespace-nowrap">{label}</div>
       {subtext && <div className="text-gray-500 text-xs mt-1">{subtext}</div>}
     </div>
   );

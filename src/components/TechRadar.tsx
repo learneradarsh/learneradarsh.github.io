@@ -8,9 +8,9 @@ const data = [
   { subject: "Tech Leadership", A: 95, fullMark: 100 },
 ];
 
-const size = 300;
+const size = 500; // Increased further to prevent clipping
 const center = size / 2;
-const radius = size / 2 - 40;
+const radius = size / 2 - 90; // More padding for labels
 const angleSlice = (Math.PI * 2) / data.length;
 
 function getCoordinates(value: number, index: number) {
@@ -41,7 +41,7 @@ export default function TechRadar() {
       <h3 className="text-xl font-semibold mb-6 text-emerald-400">
         Tech Lead Competency Radar
       </h3>
-      <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`}>
+      <svg width="100%" height="100%" viewBox={`0 0 ${size} ${size}`} className="max-w-[350px]">
         {/* Background Polygon */}
         <polygon
           points={bgPoints}
@@ -107,7 +107,8 @@ export default function TechRadar() {
 
         {/* Labels */}
         {data.map((d, i) => {
-          const { x, y } = getCoordinates(115, i);
+          // Push labels out further
+          const { x, y } = getCoordinates(120, i); 
           return (
             <text
               key={i}
@@ -116,7 +117,7 @@ export default function TechRadar() {
               textAnchor="middle"
               dominantBaseline="middle"
               fill="#9CA3AF"
-              fontSize="12"
+              fontSize="14"
               className="font-medium"
             >
               {d.subject}

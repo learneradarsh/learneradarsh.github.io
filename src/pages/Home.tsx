@@ -53,14 +53,29 @@ export default function Home() {
                 </a>
               </div>
 
+              {/* Social Links */}
+              <div className="flex gap-6 mb-10">
+                <a href="https://github.com/learneradarsh" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-white transition transform hover:scale-110">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" className="w-8 h-8 invert" alt="GitHub" />
+                </a>
+                <a href="https://linkedin.com/in/learneradarsh" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-white transition transform hover:scale-110">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" className="w-8 h-8" alt="LinkedIn" />
+                </a>
+                <a href="https://leetcode.com/learneradarsh" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-white transition transform hover:scale-110">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" className="w-8 h-8 invert opacity-80" alt="LeetCode" />
+                </a>
+              </div>
+
               <ImpactMetrics />
             </div>
 
-            <div className="relative hidden lg:flex justify-center">
-               {/* Replaced AbstractVisual with TechRadar for immediate "Tech Lead" signal */}
+            <div className="relative hidden lg:flex flex-col items-center justify-center gap-10">
+               {/* Tech Radar */}
                <div className="scale-110">
                  <TechRadar />
                </div>
+
+
             </div>
           </div>
         </section>
@@ -103,10 +118,14 @@ export default function Home() {
   </p>
 
   <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-    <AIToolCard name="OpenAI API" />
+    <AIToolCard name="Kiro" />
+    <AIToolCard name="Amazon Q" />
+    <AIToolCard name="ChatGPT" />
+    <AIToolCard name="Deep Seek" />
+    <AIToolCard name="Antigravity" />
     <AIToolCard name="LangChain" />
     <AIToolCard name="HuggingFace" />
-    <AIToolCard name="Prompt Engineering" />
+    <AIToolCard name="Prompt Eng." />
   </div>
 </Section>
 
