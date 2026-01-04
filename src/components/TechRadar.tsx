@@ -1,4 +1,4 @@
-import React from "react";
+
 
 const data = [
   { subject: "Frontend Arch", A: 95, fullMark: 100 },
@@ -67,7 +67,7 @@ export default function TechRadar() {
         ))}
 
         {/* Axes */}
-        {data.map((d, i) => {
+        {data.map((_, i) => {
           const { x, y } = getCoordinates(100, i);
           return (
             <line

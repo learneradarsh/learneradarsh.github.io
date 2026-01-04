@@ -5,7 +5,7 @@ import TechCategory from "../components/TechCategory";
 import Header from "../components/Header";
 import ProjectCard from "../components/ProjectCard";
 import WhyCard from "../components/WhyCard";
-import ValueCard from "../components/ValueCard";
+
 import AIToolCard from "../components/AIToolCard";
 import AwardCard from "../components/AwardCard";
 import ExperienceCard from "../components/ExperienceCard";
