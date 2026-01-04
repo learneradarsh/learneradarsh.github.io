@@ -1,13 +1,21 @@
+import React from "react";
+
 type WhyCardProps = {
   title: string;
   desc: string;
+  icon: React.ReactNode;
 };
 
-export default function WhyCard({ title, desc }: WhyCardProps) {
+export default function WhyCard({ title, desc, icon }: WhyCardProps) {
   return (
-    <div className="border border-white/10 rounded-xl p-6 bg-gradient-to-br from-white/5 to-transparent">
-      <h3 className="text-lg font-medium">{title}</h3>
-      <p className="mt-3 text-gray-400 text-sm leading-relaxed">
+    <div className="flex flex-col items-start p-4 hover:bg-white/5 rounded-xl transition-colors group">
+      <div className="mb-4 p-3 rounded-lg bg-emerald-500/10 text-emerald-400 group-hover:bg-emerald-500 group-hover:text-black transition-colors duration-300">
+        {icon}
+      </div>
+      <h3 className="text-xl font-bold text-white mb-2 group-hover:text-emerald-400 transition-colors">
+        {title}
+      </h3>
+      <p className="text-gray-400 text-sm leading-relaxed">
         {desc}
       </p>
     </div>

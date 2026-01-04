@@ -4,6 +4,7 @@ import TechCategory from "../components/TechCategory";
 
 import Header from "../components/Header";
 import ProjectCard from "../components/ProjectCard";
+import WhyCard from "../components/WhyCard";
 import ValueCard from "../components/ValueCard";
 import AIToolCard from "../components/AIToolCard";
 import AwardCard from "../components/AwardCard";
@@ -79,25 +80,31 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ================= QUICK VALUE ================= */}
-        <Section>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <ValueCard
-              title="Built for scale"
-              desc="Worked on systems used by 100M+ users with strict performance and reliability requirements."
+        {/* ================= WHY HIRE ME ================= */}
+        <Section title="Why you should hire me?">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <WhyCard
+              icon={<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07L19.07 4.93"/></svg>}
+              title="Scale & Performance"
+              desc="Architecting resilient systems for 100M+ users. I optimize bundles, reduce latency, and ensure high availability."
             />
-            <ValueCard
-              title="Leadership & ownership"
-              desc="Led teams, migrations, hiring, mentoring, and release planning."
+            <WhyCard
+              icon={<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>}
+              title="Engineering Leadership"
+              desc="Leading teams, mentoring engineers, and driving best practices (CI/CD, Nx) to elevate developer experience."
             />
-            <ValueCard
-              title="AI with purpose"
-              desc="Built AI POCs using OpenAI & LangChain that solved real business problems."
+            <WhyCard
+              icon={<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>}
+              title="0 to 1 Product Building"
+              desc="Thriving in ambiguity to build MVPs and align technical decisions with business goals for real user value."
+            />
+            <WhyCard
+              icon={<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" x2="12" y1="19" y2="22"/></svg>}
+              title="Applied AI & Innovation"
+              desc="Building practical AI solutions using OpenAI & LangChain that go beyond hype to solve business needs."
             />
           </div>
         </Section>
-
-
 
         {/* ================= SKILLS ================= */}
         <Section title="Technical Expertise">
@@ -142,12 +149,12 @@ export default function Home() {
   <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
     <AIToolCard name="Kiro" />
     <AIToolCard name="Amazon Q" />
-    <AIToolCard name="ChatGPT" />
-    <AIToolCard name="Deep Seek" />
     <AIToolCard name="Antigravity" />
     <AIToolCard name="LangChain" />
-    <AIToolCard name="HuggingFace" />
+    <AIToolCard name="Cursor" />
     <AIToolCard name="Prompt Eng." />
+    <AIToolCard name="ChatGPT" />
+    <AIToolCard name="Deep Seek" />
   </div>
 </Section>
 
