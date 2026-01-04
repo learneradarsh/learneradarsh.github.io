@@ -383,9 +383,9 @@ function Section({
 }) {
   return (
     <section id={id} className="border-t border-white/10">
-      <div className="max-w-7xl mx-auto px-6 py-24">
+      <div className="max-w-7xl mx-auto px-6 py-12 md:py-24">
         {title && (
-          <h2 className="text-3xl md:text-4xl font-semibold mb-12">
+          <h2 className="text-3xl md:text-4xl font-semibold mb-8 md:mb-12">
             {title}
           </h2>
         )}
