@@ -1,33 +1,36 @@
 {
-  "name": "learneradarsh",
+  "name": "learneradarsh.github.io",
+  "private": true,
   "version": "0.0.0",
-  "description": "Design-minded full stack developer focused on building scalable products and experiences",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/learneradarsh/learneradarsh.github.io.git"
-  },
-  "homepage": "https://github.com/learneradarsh/learneradarsh.github.io.git",
-  "main": "gulpfile.js",
+  "type": "module",
   "scripts": {
-    "start": "gulp serve --watch",
-    "build": "gulp build"
-  },
-  "author": "Adarsh Pandey",
-  "license": "ISC",
-  "devDependencies": {
-    "@nuscout/eslint-config": "^0.2.1",
-    "browser-sync": "^2.27.10",
-    "gulp": "^4.0.0",
-    "gulp-autoprefixer": "^7.0.0",
-    "gulp-clean-css": "^4.3.0",
-    "gulp-eslint": "^6.0.0",
-    "gulp-imagemin": "6.0.0",
-    "gulp-sass": "^4.1.0",
-    "gulp-uglify": "3.0.2"
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
-    "gem": "^2.4.3",
-    "three": "^0.152.2",
-    "gsap": "^3.12.2"
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-router-dom": "^7.11.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@types/node": "^24.10.1",
+    "@types/react": "^19.2.5",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.1",
+    "autoprefixer": "^10.4.23",
+    "eslint": "^9.39.1",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.4.24",
+    "gh-pages": "^6.3.0",
+    "globals": "^16.5.0",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.18",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.46.4",
+    "vite": "^7.2.4"
   }
 }
