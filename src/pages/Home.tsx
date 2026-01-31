@@ -21,18 +21,19 @@ export default function Home() {
         <section className="relative overflow-hidden">
           <div className="max-w-7xl mx-auto px-6 pt-36 pb-28 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div>
-              <p className="text-emerald-400 text-sm tracking-wide uppercase font-semibold mb-4">
-                Senior Full-Stack Engineer · Tech Lead · AI-Driven
+              <p className="text-emerald-400 text-sm tracking-wide">
+                Senior Software Engineer · Tech Lead · AI-Driven
               </p>
 
               <h1 className="text-5xl md:text-7xl font-bold leading-tight tracking-tight mb-8">
                 I build <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">scalable</span> systems.
               </h1>
 
-              <p className="text-gray-300 max-w-xl text-lg leading-relaxed mb-10">
-                Senior Tech Lead with 7+ years of experience. I don't just write code; 
-                I design resilient architectures, lead high-performing teams, and deliver 
-                business value for 100M+ users.
+              <p className="mt-6 text-gray-300 max-w-xl text-lg">
+                Senior Software Engineer and Tech Lead with 7+ years of
+                experience across frontend, backend, cloud, and AI systems.
+                I lead teams, own architecture, and ship under real-world
+                constraints for 100M+ users.
               </p>
 
               <div className="flex flex-wrap gap-4 mb-14">
