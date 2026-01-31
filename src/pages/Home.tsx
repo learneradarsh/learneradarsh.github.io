@@ -10,6 +10,10 @@ import AIToolCard from "../components/AIToolCard";
 import AwardCard from "../components/AwardCard";
 import ExperienceCard from "../components/ExperienceCard";
 import BarGraph from "../components/BarGraph";
+import ImpactDashboard from "../components/ImpactDashboard";
+import PremiumCTA from "../components/PremiumCTA";
+import Testimonials from "../components/Testimonials";
+import PressSection from "../components/PressSection";
 
 export default function Home() {
   return (
@@ -78,6 +82,22 @@ export default function Home() {
 
 
             </div>
+          </div>
+        </section>
+
+        {/* ================= IMPACT DASHBOARD ================= */}
+        <section className="border-t border-white/10">
+          <div className="max-w-7xl mx-auto px-6 py-12 md:py-24">
+            <div className="mb-8">
+              <p className="text-emerald-400 text-sm tracking-wide mb-2">REAL-WORLD IMPACT</p>
+              <h2 className="text-3xl md:text-4xl font-semibold mb-4">
+                Quantified Results at Scale
+              </h2>
+              <p className="text-gray-400 max-w-3xl">
+                Beyond code — these are tangible outcomes from my work. From optimizing systems for 100M+ users to leading teams and shipping impactful features that drive business metrics.
+              </p>
+            </div>
+            <ImpactDashboard />
           </div>
         </section>
 
@@ -358,13 +378,64 @@ export default function Home() {
   </div>
 </Section>
 
+{/* ================= TESTIMONIALS ================= */}
+<Testimonials />
+
+{/* ================= EXPERTISE AREAS ================= */}
+<PressSection />
+
+{/* ================= PREMIUM CTA ================= */}
+<div className="border-t border-white/10">
+  <PremiumCTA />
+</div>
 
         {/* ================= FOOTER ================= */}
-        <footer className="border-t border-white/10 py-16 text-center text-gray-500">
-          Bengaluru, India · learner.adarsh@gmail.com ·{" "}
-          <a className="text-emerald-400" href="https://github.com/learneradarsh">GitHub</a> ·{" "}
-          <a className="text-emerald-400" href="https://linkedin.com/in/learneradarsh">LinkedIn</a> ·{" "}
-          <a className="text-emerald-400" href="https://leetcode.com/learneradarsh">LeetCode</a>
+        <footer className="border-t border-white/10 bg-neutral-900/50 backdrop-blur-sm">
+          <div className="max-w-7xl mx-auto px-6 py-16">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+              {/* Brand */}
+              <div>
+                <h3 className="text-white font-semibold mb-4">Adarsh</h3>
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  Senior Software Engineer & Tech Lead. Building scalable systems for 100M+ users.
+                </p>
+              </div>
+
+              {/* Quick Links */}
+              <div>
+                <h4 className="text-white font-semibold mb-4">Quick Links</h4>
+                <ul className="space-y-2 text-gray-400 text-sm">
+                  <li><a href="#experience" className="hover:text-emerald-400 transition">Experience</a></li>
+                  <li><a href="https://github.com/learneradarsh" target="_blank" rel="noreferrer" className="hover:text-emerald-400 transition">GitHub</a></li>
+                  <li><a href="https://linkedin.com/in/learneradarsh" target="_blank" rel="noreferrer" className="hover:text-emerald-400 transition">LinkedIn</a></li>
+                  <li><a href="https://leetcode.com/learneradarsh" target="_blank" rel="noreferrer" className="hover:text-emerald-400 transition">LeetCode</a></li>
+                </ul>
+              </div>
+
+              {/* Contact */}
+              <div>
+                <h4 className="text-white font-semibold mb-4">Get In Touch</h4>
+                <p className="text-gray-400 text-sm mb-3">
+                  Open to exciting opportunities and collaborations.
+                </p>
+                <a href="mailto:learner.adarsh@gmail.com" className="inline-block px-4 py-2 rounded-full bg-emerald-500/20 border border-emerald-400/50 text-emerald-400 text-sm hover:bg-emerald-500/30 transition">
+                  Email Me
+                </a>
+              </div>
+            </div>
+
+            {/* Divider */}
+            <div className="border-t border-white/10 pt-8">
+              <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-gray-500 text-sm">
+                <p>Bengaluru, India</p>
+                <p>© 2026 Adarsh. All rights reserved.</p>
+                <div className="flex gap-4">
+                  <a href="https://github.com/learneradarsh" target="_blank" rel="noreferrer" className="hover:text-emerald-400 transition">GitHub</a>
+                  <a href="https://linkedin.com/in/learneradarsh" target="_blank" rel="noreferrer" className="hover:text-emerald-400 transition">LinkedIn</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </footer>
       </main>
     </>
