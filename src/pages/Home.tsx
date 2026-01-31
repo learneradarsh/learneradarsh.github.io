@@ -23,7 +23,7 @@ export default function Home() {
       <main className="bg-neutral-950 text-white min-h-screen">
         {/* ================= HERO ================= */}
         <section className="relative overflow-hidden">
-          <div className="max-w-7xl mx-auto px-6 pt-36 pb-28 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+          <div className="max-w-7xl mx-auto px-6 pt-28 pb-20 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <p className="text-emerald-400 text-sm tracking-wide">
                 Senior Software Engineer · Tech Lead · AI-Driven
@@ -40,10 +40,10 @@ export default function Home() {
                 constraints for 100M+ users.
               </p>
 
-              <div className="flex flex-wrap gap-4 mb-14">
+              <div className="flex flex-wrap gap-8 mb-14">
                 <a
                   href="#experience"
-                  className="px-8 py-4 rounded-full bg-emerald-500 text-black font-bold hover:bg-emerald-400 transition shadow-[0_0_20px_rgba(16,185,129,0.3)]"
+                  className="px-8 py-4 m-4 rounded-full bg-emerald-500 text-black font-bold hover:bg-emerald-400 transition shadow-[0_0_20px_rgba(16,185,129,0.3)]"
                 >
                   View Experience
                 </a>
@@ -52,7 +52,7 @@ export default function Home() {
                   href="https://drive.google.com/file/d/1YYKPxAXHBIP_GBwjLSXs098mdNsa4cFS/view"
                   target="_blank"
                   rel="noreferrer"
-                  className="px-8 py-4 rounded-full border border-white/20 hover:bg-white/5 transition font-medium"
+                  className="px-8 py-4 m-4 rounded-full border border-white/20 hover:bg-white/5 transition font-medium"
                 >
                   Download Resume
                 </a>
@@ -101,9 +101,38 @@ export default function Home() {
           </div>
         </section>
 
+        {/* ================= QUICK FACTS (HR FOCUS) ================= */}
+        <Section>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="border border-emerald-400/30 rounded-lg p-4 bg-emerald-400/5">
+              <p className="text-emerald-400 text-sm font-semibold">Years Experience</p>
+              <p className="text-2xl font-bold mt-2">7+</p>
+              <p className="text-gray-500 text-xs mt-1">Senior Level</p>
+            </div>
+            <div className="border border-cyan-400/30 rounded-lg p-4 bg-cyan-400/5">
+              <p className="text-cyan-400 text-sm font-semibold">Companies</p>
+              <p className="text-2xl font-bold mt-2">5</p>
+              <p className="text-gray-500 text-xs mt-1">Scale-ups to Fortune</p>
+            </div>
+            <div className="border border-emerald-400/30 rounded-lg p-4 bg-emerald-400/5">
+              <p className="text-emerald-400 text-sm font-semibold">Users Impacted</p>
+              <p className="text-2xl font-bold mt-2">100M+</p>
+              <p className="text-gray-500 text-xs mt-1">Delta Airlines</p>
+            </div>
+            <div className="border border-cyan-400/30 rounded-lg p-4 bg-cyan-400/5">
+              <p className="text-cyan-400 text-sm font-semibold">Certifications</p>
+              <p className="text-2xl font-bold mt-2">4</p>
+              <p className="text-gray-500 text-xs mt-1">AWS, Cloud, Security</p>
+            </div>
+          </div>
+        </Section>
+
+        {/* ================= SOCIAL PROOF (TESTIMONIALS EARLY) ================= */}
+        <Testimonials />
+
         {/* ================= WHY HIRE ME ================= */}
-        <Section title="Why you should hire me?">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <Section title="Why Hire Me?">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
             <WhyCard
               icon={<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07L19.07 4.93"/></svg>}
               title="Scale & Performance"
@@ -126,6 +155,9 @@ export default function Home() {
             />
           </div>
         </Section>
+
+        {/* ================= EXPERTISE AREAS (TRUST SIGNALS) ================= */}
+        <PressSection />
 
         {/* ================= SKILLS ================= */}
         <Section title="Technical Expertise">
@@ -162,12 +194,11 @@ export default function Home() {
 
         {/* ================= AI TOOLS ================= */}
 <Section title="AI Tools & Innovation">
-  <p className="text-gray-400 max-w-2xl mb-10">
-    Practical use of AI tools to improve developer productivity, internal platforms,
-    and customer experience — not demos or hype.
+  <p className="text-gray-400 max-w-2xl mb-8 text-sm">
+    Practical AI tools for developer productivity and customer experience.
   </p>
 
-  <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+  <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
     <AIToolCard name="Kiro" />
     <AIToolCard name="Amazon Q" />
     <AIToolCard name="Antigravity" />
@@ -185,7 +216,7 @@ export default function Home() {
 <Section id="experience" title="Professional Experience">
 
   {/* ===== EXPERIENCE OVERVIEW ===== */}
-  <div className="mb-16 space-y-3">
+  <div className="mb-12 space-y-2">
     <BarGraph label="Delta Airlines" value={3.1} />
     <BarGraph label="Publicis Sapient" value={1.9} />
     <BarGraph label="ThoughtWorks" value={1.0} />
@@ -193,7 +224,7 @@ export default function Home() {
     <BarGraph label="LearnShiz Techies" value={0.7} />
   </div>
 
-  <div className="relative border-l border-white/10 md:border-none ml-4 md:ml-0 pl-6 md:pl-0 space-y-8">
+  <div className="relative border-l border-white/10 md:border-none ml-4 md:ml-0 pl-6 md:pl-0 space-y-6">
 
 
   {/* ===== DELTA AIRLINES ===== */}
@@ -276,7 +307,7 @@ export default function Home() {
 
         {/* ================= PROJECTS ================= */}
         <Section title="Projects">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <ProjectCard
               title="Driftless"
               year="2025"
@@ -317,7 +348,7 @@ export default function Home() {
 
         {/* ================= ACHIEVEMENTS ================= */}
 <Section title="Achievements">
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
      <AwardCard
       highlight
       text="Above & Beyond Year End Award — Delta Airlines (2025)"
@@ -343,7 +374,7 @@ export default function Home() {
 
 {/* ================= CERTIFICATIONS ================= */}
 <Section title="Certifications & Trainings">
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
     <AwardCard
       highlight
       text="AWS Solutions Architect — Certified (2025)"
@@ -377,12 +408,6 @@ export default function Home() {
     </div>
   </div>
 </Section>
-
-{/* ================= TESTIMONIALS ================= */}
-<Testimonials />
-
-{/* ================= EXPERTISE AREAS ================= */}
-<PressSection />
 
 {/* ================= PREMIUM CTA ================= */}
 <div className="border-t border-white/10">
@@ -455,9 +480,9 @@ function Section({
 }) {
   return (
     <section id={id} className="border-t border-white/10">
-      <div className="max-w-7xl mx-auto px-6 py-12 md:py-24">
+      <div className="max-w-7xl mx-auto px-6 py-10 md:py-16">
         {title && (
-          <h2 className="text-3xl md:text-4xl font-semibold mb-8 md:mb-12">
+          <h2 className="text-3xl md:text-4xl font-semibold mb-6 md:mb-8">
             {title}
           </h2>
         )}
