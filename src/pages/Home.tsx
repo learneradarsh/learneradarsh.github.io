@@ -49,7 +49,7 @@ export default function Home() {
                 </a>
 
                 <a
-                  href="https://drive.google.com/file/d/1YYKPxAXHBIP_GBwjLSXs098mdNsa4cFS/view"
+                  href="https://drive.google.com/file/d/1DLXnD9u4RYSHferNfcJBYc1giqhJZIoz/view?usp=sharing"
                   target="_blank"
                   rel="noreferrer"
                   className="px-8 py-4 m-4 rounded-full border border-white/20 hover:bg-white/5 transition font-medium"
