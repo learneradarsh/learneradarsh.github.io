@@ -85,6 +85,52 @@ export default function Home() {
           </div>
         </section>
 
+        {/* ================= FEATURED VIDEO ================= */}
+        <section className="border-t border-white/10">
+          <div className="max-w-7xl mx-auto px-6 py-12 md:py-20">
+            <div className="mb-8 text-center">
+              <p className="text-emerald-400 text-sm tracking-wide mb-2">FEATURED WORKSHOP</p>
+              <h2 className="text-3xl md:text-4xl font-semibold mb-3">
+                Watch a live workshop session
+              </h2>
+              <p className="text-gray-400 max-w-3xl mx-auto">
+                Interested in booking a college workshop session? Reach out directly to learner.adarsh@gmail.com to schedule a customised talk on software engineering, cloud, or AI.
+              </p>
+            </div>
+
+            <div className="mx-auto max-w-5xl rounded-3xl overflow-hidden border border-white/10 bg-black shadow-[0_20px_80px_rgba(0,0,0,0.45)]">
+              <div className="relative aspect-video">
+                <iframe
+                  className="absolute inset-0 w-full h-full"
+                  src="https://www.youtube.com/embed/Z0q8uG_jEi8"
+                  title="From Startup to Delta Airlines: Adarsh Pandey on Tech Careers"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                  loading="lazy"
+                />
+              </div>
+            </div>
+
+            <div className="mt-4 text-center text-gray-400 text-sm max-w-3xl mx-auto">
+              If the embedded player does not work, <a href="https://www.youtube.com/watch?v=Z0q8uG_jEi8" target="_blank" rel="noreferrer" className="text-emerald-400 hover:text-emerald-300 transition">watch the workshop directly on YouTube</a>.
+            </div>
+
+            <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a
+                href="mailto:learner.adarsh@gmail.com?subject=Workshop%20Booking%20Inquiry"
+                className="inline-flex items-center justify-center rounded-full bg-emerald-500 px-8 py-4 text-black font-semibold hover:bg-emerald-400 transition"
+              >
+                Book a workshop session
+              </a>
+              <p className="text-gray-400 text-sm max-w-2xl text-center">
+                Want me to present at your college or event? Reach out to book a customised workshop on software engineering, cloud, or AI.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* ================= IMPACT DASHBOARD ================= */}
         <section className="border-t border-white/10">
           <div className="max-w-7xl mx-auto px-6 py-12 md:py-24">
