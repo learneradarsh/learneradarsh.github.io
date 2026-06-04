@@ -22,11 +22,11 @@ export default function Home() {
 
       <main className="bg-neutral-950 text-white min-h-screen">
         {/* ================= HERO ================= */}
-        <section className="relative overflow-hidden">
+        <section id="home" className="relative overflow-hidden scroll-mt-28">
           <div className="max-w-7xl mx-auto px-6 pt-28 pb-20 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <p className="text-emerald-400 text-sm tracking-wide">
-                Senior Software Engineer · Tech Lead · AI-Driven
+                Lead Developer 1 · Delta Airlines · AI-Driven
               </p>
 
               <h1 className="text-5xl md:text-7xl font-bold leading-tight tracking-tight mb-8">
@@ -34,22 +34,13 @@ export default function Home() {
               </h1>
 
               <p className="mt-6 text-gray-300 max-w-xl text-lg">
-                Senior Software Engineer and Tech Lead with 7+ years of
-                experience across frontend, backend, cloud, and AI systems.
-                I lead teams, own architecture, and ship under real-world
-                constraints for 100M+ users.
+                Promoted to Lead Developer 1 at Delta Airlines in May, with 7+ years of experience across frontend, backend, cloud, and AI systems.
+                I lead teams, own architecture, and ship under real-world constraints for 100M+ users.
               </p>
 
               <div className="flex flex-wrap gap-8 mb-14">
                 <a
-                  href="#experience"
-                  className="px-8 py-4 m-4 rounded-full bg-emerald-500 text-black font-bold hover:bg-emerald-400 transition shadow-[0_0_20px_rgba(16,185,129,0.3)]"
-                >
-                  View Experience
-                </a>
-
-                <a
-                  href="https://drive.google.com/file/d/1DLXnD9u4RYSHferNfcJBYc1giqhJZIoz/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1TFvgNOAvS07SrYDtZ0MjaqoErtyMIpYz/view?usp=sharing"
                   target="_blank"
                   rel="noreferrer"
                   className="px-8 py-4 m-4 rounded-full border border-white/20 hover:bg-white/5 transition font-medium"
@@ -86,7 +77,7 @@ export default function Home() {
         </section>
 
         {/* ================= FEATURED VIDEO ================= */}
-        <section className="border-t border-white/10">
+        <section id="workshop" className="border-t border-white/10 scroll-mt-28">
           <div className="max-w-7xl mx-auto px-6 py-12 md:py-20">
             <div className="mb-8 text-center">
               <p className="text-emerald-400 text-sm tracking-wide mb-2">FEATURED WORKSHOP</p>
@@ -131,8 +122,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ================= IMPACT DASHBOARD ================= */}
-        <section className="border-t border-white/10">
+        <section id="impact" className="border-t border-white/10 scroll-mt-28">
           <div className="max-w-7xl mx-auto px-6 py-12 md:py-24">
             <div className="mb-8">
               <p className="text-emerald-400 text-sm tracking-wide mb-2">REAL-WORLD IMPACT</p>
@@ -177,7 +167,7 @@ export default function Home() {
         <Testimonials />
 
         {/* ================= WHY HIRE ME ================= */}
-        <Section title="Why Hire Me?">
+        <Section id="why" title="Why Hire Me?">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
             <WhyCard
               icon={<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07L19.07 4.93"/></svg>}
@@ -206,7 +196,7 @@ export default function Home() {
         <PressSection />
 
         {/* ================= SKILLS ================= */}
-        <Section title="Technical Expertise">
+        <Section id="skills" title="Technical Expertise">
            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
              {/* Frontend */}
              <TechCategory 
@@ -239,7 +229,7 @@ export default function Home() {
         </Section>
 
         {/* ================= AI TOOLS ================= */}
-<Section title="AI Tools & Innovation">
+<Section id="ai-tools" title="AI Tools & Innovation">
   <p className="text-gray-400 max-w-2xl mb-8 text-sm">
     Practical AI tools for developer productivity and customer experience.
   </p>
@@ -256,6 +246,115 @@ export default function Home() {
   </div>
 </Section>
 
+        {/* ================= FEATURED BOOKS WIDGET ================= */}
+        <section id="books" className="border-t border-white/10 scroll-mt-28">
+          <div className="max-w-7xl mx-auto px-6 py-12 md:py-16">
+            <div className="rounded-[2rem] border border-white/10 bg-gradient-to-br from-slate-950/90 via-slate-900/90 to-slate-950/95 p-6 shadow-[0_30px_80px_rgba(0,0,0,0.35)]">
+              <div className="flex flex-col lg:flex-row gap-8 lg:items-end justify-between mb-8">
+                <div className="max-w-2xl">
+                  <p className="text-emerald-400 text-sm uppercase tracking-[0.3em] mb-3">Featured Reads</p>
+                  <h2 className="text-3xl md:text-4xl font-semibold text-white leading-tight">
+                    Published books by Adarsh Pandey
+                  </h2>
+                  <p className="mt-4 text-gray-300 max-w-xl leading-7">
+                    Two bold fiction releases now available on Amazon India — crafted for readers who love immersive stories with emotional depth and mythic energy.
+                  </p>
+                </div>
+              </div>
+
+              <div className="grid gap-6 xl:grid-cols-[1.2fr_0.8fr]">
+                <div className="grid gap-6 sm:grid-cols-2">
+                  <article className="group relative overflow-hidden rounded-[1.75rem] border border-white/10 bg-slate-900/80 p-5 shadow-[0_30px_60px_rgba(0,0,0,0.25)] transition-transform duration-300 hover:-translate-y-1 hover:shadow-[0_35px_90px_rgba(14,165,233,0.2)]">
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(16,185,129,0.2),_transparent_35%)] pointer-events-none" />
+                    <div className="relative flex flex-col h-full">
+                      <div className="mb-5 overflow-hidden rounded-[1.5rem] border border-white/10 bg-slate-950">
+                        <a href="https://www.amazon.in/Soul-Transit-Adarsh-Pandey/dp/B0GQ96P99G" target="_blank" rel="noreferrer" className="block aspect-[3/4] overflow-hidden transition duration-300 group-hover:scale-105">
+                          <img
+                            src="https://m.media-amazon.com/images/P/B0GQ96P99G._SX300_.jpg"
+                            alt="Soul in Transit book cover"
+                            className="h-full w-full object-cover"
+                          />
+                        </a>
+                      </div>
+                      <div className="space-y-4">
+                        <div>
+                          <p className="text-cyan-300 text-xs uppercase tracking-[0.3em] mb-2">Soul in Transit</p>
+                          <h3 className="text-2xl font-semibold text-white leading-tight">A personal voyage through change</h3>
+                        </div>
+                        <p className="text-gray-300 leading-7">
+                          A contemporary fiction journey that explores identity, transformation, and the power of personal renewal.
+                        </p>
+                        <div className="flex flex-wrap gap-2">
+                          <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] uppercase tracking-[0.2em] text-gray-300">Fiction</span>
+                          <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] uppercase tracking-[0.2em] text-gray-300">Amazon India</span>
+                        </div>
+                        <a
+                          href="https://www.amazon.in/Soul-Transit-Adarsh-Pandey/dp/B0GQ96P99G"
+                          target="_blank"
+                          rel="noreferrer"
+                          className="inline-flex items-center gap-2 rounded-full bg-emerald-500 px-5 py-3 text-sm font-semibold text-black hover:bg-emerald-400 transition"
+                        >
+                          Read on Amazon
+                          <span aria-hidden="true">→</span>
+                        </a>
+                      </div>
+                    </div>
+                  </article>
+
+                  <article className="group relative overflow-hidden rounded-[1.75rem] border border-white/10 bg-slate-900/80 p-5 shadow-[0_30px_60px_rgba(0,0,0,0.25)] transition-transform duration-300 hover:-translate-y-1 hover:shadow-[0_35px_90px_rgba(6,182,212,0.2)]">
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(6,182,212,0.16),_transparent_30%)] pointer-events-none" />
+                    <div className="relative flex flex-col h-full">
+                      <div className="mb-5 overflow-hidden rounded-[1.5rem] border border-white/10 bg-slate-950">
+                        <a href="https://www.amazon.in/Kalyuga-Last-Echo-Adarsh-Pandey/dp/B0DFLGPJJ7" target="_blank" rel="noreferrer" className="block aspect-[3/4] overflow-hidden transition duration-300 group-hover:scale-105">
+                          <img
+                            src="https://m.media-amazon.com/images/P/B0DFLGPJJ7._SX300_.jpg"
+                            alt="Kalyuga: Last Echo book cover"
+                            className="h-full w-full object-cover"
+                          />
+                        </a>
+                      </div>
+                      <div className="space-y-4">
+                        <div>
+                          <p className="text-cyan-300 text-xs uppercase tracking-[0.3em] mb-2">Kalyuga: Last Echo</p>
+                          <h3 className="text-2xl font-semibold text-white leading-tight">A modern myth for today’s readers</h3>
+                        </div>
+                        <p className="text-gray-300 leading-7">
+                          A thrilling fusion of myth, mystery, and emotional resonance designed for readers who love immersive fiction.
+                        </p>
+                        <div className="flex flex-wrap gap-2">
+                          <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] uppercase tracking-[0.2em] text-gray-300">Thriller</span>
+                          <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] uppercase tracking-[0.2em] text-gray-300">Amazon India</span>
+                        </div>
+                        <a
+                          href="https://www.amazon.in/Kalyuga-Last-Echo-Adarsh-Pandey/dp/B0DFLGPJJ7"
+                          target="_blank"
+                          rel="noreferrer"
+                          className="inline-flex items-center gap-2 rounded-full bg-cyan-400 px-5 py-3 text-sm font-semibold text-black hover:bg-cyan-300 transition"
+                        >
+                          View on Amazon
+                          <span aria-hidden="true">→</span>
+                        </a>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+
+                <div className="rounded-[1.75rem] border border-white/10 bg-slate-950/90 p-6 shadow-[0_25px_60px_rgba(0,0,0,0.22)]">
+                  <p className="text-emerald-400 text-sm uppercase tracking-[0.24em] mb-4">Author Spotlight</p>
+                  <h3 className="text-2xl font-semibold text-white mb-4">Published fiction with cinematic appeal</h3>
+                  <p className="text-gray-300 leading-7">
+                    Both books are written for readers who want rich characters, vivid storytelling, and a fresh voice in contemporary fiction.
+                  </p>
+                  <div className="mt-6 space-y-3 text-sm text-gray-400">
+                    <p>• A modern narrative exploring identity, hope, and redemption.</p>
+                    <p>• A mythic thriller that blends suspense with emotional drama.</p>
+                    <p>• Available now on Amazon India with international accessibility.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* ================= EXPERIENCE ================= */}
         {/* ================= PROFESSIONAL EXPERIENCE ================= */}
@@ -276,7 +375,7 @@ export default function Home() {
   {/* ===== DELTA AIRLINES ===== */}
   <ExperienceCard
     company="Delta Airlines"
-    role="Senior Developer 2 · Delta Sync WiFi"
+    role="Lead Developer 1 · Delta Sync WiFi"
     period="Dec 2022 — Present"
     location="Bengaluru, India"
     highlights={[
@@ -352,7 +451,7 @@ export default function Home() {
 
 
         {/* ================= PROJECTS ================= */}
-        <Section title="Projects">
+        <Section id="projects" title="Projects">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <ProjectCard
               title="Driftless"
@@ -393,7 +492,7 @@ export default function Home() {
         </Section>
 
         {/* ================= ACHIEVEMENTS ================= */}
-<Section title="Achievements">
+<Section id="achievements" title="Achievements">
   <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
      <AwardCard
       highlight
@@ -419,7 +518,7 @@ export default function Home() {
 </Section>
 
 {/* ================= CERTIFICATIONS ================= */}
-<Section title="Certifications & Trainings">
+<Section id="certifications" title="Certifications & Trainings">
   <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
     <AwardCard
       highlight
@@ -438,7 +537,7 @@ export default function Home() {
 </Section>
 
 {/* ================= EDUCATION ================= */}
-<Section title="Education">
+<Section id="education" title="Education">
   <div className="border border-white/10 rounded-xl p-6 bg-white/5 max-w-3xl">
     <h3 className="text-lg font-medium">
       Bachelor of Technology (B.Tech) — Computer Science & Engineering
@@ -525,7 +624,7 @@ function Section({
   id?: string;
 }) {
   return (
-    <section id={id} className="border-t border-white/10">
+    <section id={id} className="border-t border-white/10 scroll-mt-28">
       <div className="max-w-7xl mx-auto px-6 py-10 md:py-16">
         {title && (
           <h2 className="text-3xl md:text-4xl font-semibold mb-6 md:mb-8">
