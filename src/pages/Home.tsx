@@ -14,6 +14,7 @@ import ImpactDashboard from "../components/ImpactDashboard";
 import PremiumCTA from "../components/PremiumCTA";
 import Testimonials from "../components/Testimonials";
 import PressSection from "../components/PressSection";
+import TopmateCard from "../components/TopmateCard";
 
 export default function Home() {
   return (
@@ -489,6 +490,11 @@ export default function Home() {
               link="https://www.figma.com/design/sVV9T1NaQHfF721pAj9ROY"
             />
           </div>
+        </Section>
+
+        {/* ================= MENTORSHIP ================= */}
+        <Section title="Mentorship & Consulting">
+          <TopmateCard />
         </Section>
 
         {/* ================= ACHIEVEMENTS ================= */}
